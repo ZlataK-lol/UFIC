@@ -58,6 +58,7 @@ export default function ReflectionSummary() {
             <PhotoSlot label="A photo that represents your transformation" src="/photos/transformation.jpg" height={280} />
             <StaticField
               rows={2}
+              value="I chose this image because I learned that it's the people who are on the journey with you who matter most to your success."
               placeholder="Why did you choose this image to represent your journey?"
             />
           </div>

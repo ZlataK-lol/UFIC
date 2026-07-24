@@ -89,44 +89,6 @@ export default function Acknowledgements() {
           </div>
         </div>
 
-        {/* Additional thanks */}
-        <div
-          className="p-6 rounded-lg mb-12"
-          style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-        >
-          <span className="section-label mb-4 block">Additional Acknowledgements</span>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="flex flex-col gap-1.5">
-              <label className="section-label">Teammates</label>
-              <StaticField
-                rows={5}
-                value="Adam Makled (Senior, Comp Sci; Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng; Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
-              />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="section-label">Local community & South African hosts</label>
-              <StaticField
-                rows={5}
-                value="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet. That honesty made the platform better."
-              />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="section-label">Family & friends back home</label>
-              <StaticField
-                rows={4}
-                placeholder="Who supported you from afar: who did you call when you were overwhelmed or excited? What did their support mean while you were abroad?"
-              />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="section-label">Others to thank</label>
-              <StaticField
-                rows={4}
-                placeholder="Anyone else who played a role: a professor who inspired you, a scholarship that funded you, a book that prepared you, a stranger who showed you kindness."
-              />
-            </div>
-          </div>
-        </div>
-
         {/* Closing ubuntu moment */}
         <NdebeleFrame>
           <div

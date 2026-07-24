@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { withBase } from '../lib/withBase'
+import { SAPatternBg } from './SADecor'
 
 /**
  * A static photo slot that shows the image at `src` (e.g. "/photos/team-farm.jpg").
@@ -35,12 +36,15 @@ export function PhotoSlot({
   return (
     <div className="photo-slot" style={boxStyle}>
       {shown ? (
-        <img
-          src={shown}
-          alt={label}
-          className={fit === 'contain' ? 'w-full h-full object-contain absolute inset-0' : 'w-full h-full object-cover absolute inset-0'}
-          onError={() => setAutoFailed(true)}
-        />
+        <>
+          {fit === 'contain' && <SAPatternBg className="opacity-40" />}
+          <img
+            src={shown}
+            alt={label}
+            className={fit === 'contain' ? 'w-full h-full object-contain absolute inset-0' : 'w-full h-full object-cover absolute inset-0'}
+            onError={() => setAutoFailed(true)}
+          />
+        </>
       ) : (
         <>
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">

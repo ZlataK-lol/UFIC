@@ -46,7 +46,7 @@ export default function Home() {
             <div className="flex flex-col justify-center gap-6">
               <DiamondRow count={5} />
               <div>
-                <div className="section-label" style={{ color: 'rgba(202,233,245,0.7)' }}>Study Abroad Portfolio</div>
+                <div className="section-label" style={{ color: 'rgba(202,233,245,0.7)' }}>Zlata Kovrigina's Study Abroad Portfolio</div>
                 <h1
                   className="leading-tight mt-2"
                   style={{
@@ -108,7 +108,7 @@ export default function Home() {
               <PhotoSlot label="Your cover photo: South Africa" src="/photos/cover.jpg" tall />
               <StaticField
                 rows={2}
-                value="Table Mountain - South Africa"
+                value="Me at the top of Table Mountain, overlooking Cape Town"
                 style={{ background: 'rgba(240,248,255,0.08)', border: '1px solid rgba(173,216,230,0.2)', color: '#F0F8FF' }}
               />
             </div>
@@ -155,6 +155,7 @@ export default function Home() {
             </div>
             <StaticField
               rows={3}
+              value="Stepping off the plane, I felt genuinely nervous, but that nervousness kept getting pushed aside by how much beauty and nature surrounded me. It was hard to focus on being scared when there was so much to take in."
               placeholder="Describe the moment you landed. What did you see, hear, feel in those first hours in South Africa?"
             />
           </div>
