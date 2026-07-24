@@ -57,7 +57,7 @@ export default function App() {
                 fontStyle: 'italic',
               }}
             >
-              South Africa &rsquo;26
+              Zlata Kovrigina &ndash; South Africa &rsquo;26
             </span>
           </div>
           <ul className="flex gap-5 flex-wrap">
