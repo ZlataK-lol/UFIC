@@ -147,21 +147,6 @@ export default function AboutMe() {
             />
           </div>
         </div>
-
-        {/* Pre-departure photos */}
-        <div>
-          <span className="section-label mb-4 block">Before Departure</span>
-          <div className="grid grid-cols-4 gap-4">
-            {[
-              { l: 'Before the trip', f: 'before-the-trip.jpg' },
-              { l: 'With family', f: 'with-family.jpg' },
-              { l: 'With friends', f: 'with-friends.jpg' },
-              { l: 'Packing / prep day', f: 'packing-day.jpg' },
-            ].map(({ l, f }) => (
-              <PhotoSlot key={l} label={l} src={`/photos/${f}`} height={160} />
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   )

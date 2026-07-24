@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { DiamondRow, Protea, SAPatternBg, NdebeleFrame } from '../components/SADecor'
+import { DiamondRow, Protea, SAPatternBg } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
 import { StaticField } from '../components/StaticField'
 
@@ -214,19 +214,14 @@ export default function ProjectWalkthrough() {
           ))}
         </div>
 
-        {/* Demo video placeholder */}
-        <NdebeleFrame className="mb-12">
-          <div className="py-8 px-6">
-            <span className="section-label mb-3 block">Demo Video / Live Link</span>
-            <div
-              className="rounded flex flex-col items-center justify-center gap-3 py-12"
-              style={{ background: 'var(--secondary)', border: '1px dashed var(--border)' }}
-            >
-              <span style={{ fontSize: '2.5rem' }}>▶</span>
-              <StaticField value="https://afc-estate.vercel.app" style={{ maxWidth: '400px' }} />
-            </div>
-          </div>
-        </NdebeleFrame>
+        {/* Live link */}
+        <div className="mb-12 flex items-center gap-3">
+          <span className="section-label">Live Link</span>
+          <StaticField
+            value="https://afc-estate.vercel.app"
+            style={{ width: 'auto', display: 'inline-block', padding: '0.4rem 0.75rem' }}
+          />
+        </div>
 
         {/* Challenges & learnings */}
         <div className="grid grid-cols-2 gap-6 mb-10">

@@ -27,7 +27,10 @@ export function PhotoSlot({
   const [autoFailed, setAutoFailed] = useState(false)
 
   const shown = src && !autoFailed ? withBase(src) : null
-  const boxStyle = aspectRatio ? { aspectRatio } : tall ? { aspectRatio: '3 / 4' } : { height }
+  const boxStyle = {
+    ...(aspectRatio ? { aspectRatio } : tall ? { aspectRatio: '3 / 4' } : { height }),
+    ...(shown && fit === 'contain' ? { background: '#4a9ab5' } : {}),
+  }
 
   return (
     <div className="photo-slot" style={boxStyle}>

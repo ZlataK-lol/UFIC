@@ -106,10 +106,10 @@ export default function TripOverview() {
             />
           </div>
           <div className="flex flex-col gap-4">
-            <PhotoSlot label="Group photo or program banner" src="/photos/program-excursion.jpg" height={220} />
+            <PhotoSlot label="Curiocity, Cape Town" src="/photos/curiosity.jpg" height={220} fit="contain" />
             <div className="grid grid-cols-2 gap-4">
-              <PhotoSlot label="Program location" src="/photos/cape-town-view.jpg" height={140} />
-              <PhotoSlot label="Partner org / site" src="/photos/team-farm.jpg" height={140} />
+              <PhotoSlot label="EDU Africa" src="/photos/edu-africa-logo.jpg" height={140} fit="contain" />
+              <PhotoSlot label="Safe Cities Permaculture" src="/photos/safe-cities-logo.jpg" height={140} fit="contain" />
             </div>
           </div>
         </div>

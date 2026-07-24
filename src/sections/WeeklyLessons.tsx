@@ -168,14 +168,19 @@ export default function WeeklyLessons() {
                   <div className="px-6 py-6" style={{ background: 'var(--background)' }}>
                     {/* Photos row */}
                     <div className="grid grid-cols-3 gap-4 mb-6">
-                      {Array.from({ length: week.photoCount ?? 3 }).map((_, i) => (
-                        <PhotoSlot
-                          key={i}
-                          label={`Week ${week.num} highlight ${i + 1}`}
-                          src={`/photos/week-${week.num}-${i + 1}.jpg`}
-                          height={150}
-                        />
-                      ))}
+                      {Array.from({ length: week.photoCount ?? 3 }).map((_, i) => {
+                        const isFeatured = week.num === 4 && i === 9
+                        return (
+                          <div key={i} style={isFeatured ? { gridColumn: '1 / -1' } : undefined}>
+                            <PhotoSlot
+                              label={`Week ${week.num} highlight ${i + 1}`}
+                              src={`/photos/week-${week.num}-${i + 1}.jpg`}
+                              height={isFeatured ? 340 : 210}
+                              fit="contain"
+                            />
+                          </div>
+                        )
+                      })}
                     </div>
 
                     {/* Real report fields */}

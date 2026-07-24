@@ -4,7 +4,6 @@ import Home from './sections/Home'
 import AboutMe from './sections/AboutMe'
 import TripOverview from './sections/TripOverview'
 import WeeklyLessons from './sections/WeeklyLessons'
-import PhotoGallery from './sections/PhotoGallery'
 import ProjectWalkthrough from './sections/ProjectWalkthrough'
 import ReflectionSummary from './sections/ReflectionSummary'
 import Acknowledgements from './sections/Acknowledgements'
@@ -14,7 +13,6 @@ const NAV_ITEMS = [
   { id: 'about', label: 'About Me' },
   { id: 'overview', label: 'Trip Overview' },
   { id: 'lessons', label: 'Weekly Lessons' },
-  { id: 'gallery', label: 'Gallery' },
   { id: 'project', label: 'Project' },
   { id: 'reflection', label: 'Reflection' },
   { id: 'thanks', label: 'Acknowledgements' },
@@ -113,10 +111,6 @@ export default function App() {
         <NdebeleDivider />
 
         <section id="lessons"><WeeklyLessons /></section>
-
-        <NdebeleDivider />
-
-        <section id="gallery"><PhotoGallery /></section>
 
         <NdebeleDivider />
 

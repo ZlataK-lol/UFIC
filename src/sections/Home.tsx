@@ -108,7 +108,7 @@ export default function Home() {
               <PhotoSlot label="Your cover photo: South Africa" src="/photos/cover.jpg" tall />
               <StaticField
                 rows={2}
-                placeholder="Caption: where was this photo taken?"
+                value="Table Mountain - South Africa"
                 style={{ background: 'rgba(240,248,255,0.08)', border: '1px solid rgba(173,216,230,0.2)', color: '#F0F8FF' }}
               />
             </div>
