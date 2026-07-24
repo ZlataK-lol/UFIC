@@ -2,36 +2,11 @@ import { DiamondRow, Protea, AfricanSun, SAPatternBg, NdebeleFrame, ZuluShield }
 import { StaticField } from '../components/StaticField'
 
 const HONOREES = [
-  {
-    name: 'Dr. Sanethia Thomas',
-    role: 'Program Faculty Advisor',
-    icon: '🎓',
-    message: 'Thank you for advising Penguin Intelligence through every weekly check-in, for pushing us to keep the client\'s actual needs at the center of the build, and for the structure that kept three students accountable across ten weeks and a continent.',
-  },
-  {
-    name: 'Ping Neo',
-    role: 'Program Coordinator / Mentor',
-    icon: '⭐',
-    message: 'Thank you for the support that kept this program running smoothly behind the scenes, from logistics to guidance, so we could focus on the work in front of us.',
-  },
-  {
-    name: 'Naomi Harrell',
-    role: 'Program Support & Coordination',
-    icon: '💫',
-    message: 'Thank you for the coordination and support that made this experience possible — the kind of behind-the-scenes work that students rarely see but always depend on.',
-  },
-  {
-    name: 'EDU Africa',
-    role: 'Program Partner Organization',
-    icon: '🌍',
-    message: 'Thank you for the local infrastructure, knowledge, and mission that made it possible for a group of UF students to land in Cape Town and do work that actually mattered.',
-  },
-  {
-    name: 'Safe Cities Permaculture',
-    role: 'Elsies River, Western Cape — Community Transformation & Skills Development',
-    icon: '🤝',
-    message: 'Thank you for trusting three students with a real problem — for the patience during our first rough interviews, for the honest usability feedback, and for welcoming us onto the farm. Building Elsie for you was the best part of this program.',
-  },
+  { name: 'Dr. Sanethia Thomas', icon: '🎓' },
+  { name: 'Ping Neo', icon: '⭐' },
+  { name: 'Naomi Harrell', icon: '💫' },
+  { name: 'EDU Africa', icon: '🌍' },
+  { name: 'Safe Cities Permaculture', icon: '🤝' },
 ]
 
 export default function Acknowledgements() {
@@ -85,41 +60,33 @@ export default function Acknowledgements() {
       <div className="ndebele-border" />
 
       <div className="px-8 py-16 max-w-5xl mx-auto">
-        {/* Thank you cards */}
-        <div className="flex flex-col gap-6 mb-14">
-          {HONOREES.map((person, i) => (
-            <div
-              key={person.name}
-              className="rounded-lg overflow-hidden"
-              style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
-            >
-              {/* Card header */}
-              <div
-                className="flex items-center gap-5 px-6 py-4"
-                style={{
-                  background: i % 2 === 0
-                    ? 'linear-gradient(90deg, var(--muted) 0%, var(--secondary) 100%)'
-                    : 'linear-gradient(90deg, var(--secondary) 0%, var(--background) 100%)',
-                  borderBottom: '1px solid var(--border)',
-                }}
-              >
-                <span style={{ fontSize: '2rem' }}>{person.icon}</span>
-                <div className="flex-1">
-                  <div style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: '1.2rem', color: 'var(--foreground)', fontWeight: 700 }}>
-                    {person.name}
-                  </div>
-                  <div className="section-label mt-0.5">{person.role}</div>
-                </div>
-                <DiamondRow count={3} />
-              </div>
+        {/* Thank you section — everyone in one place */}
+        <div
+          className="rounded-lg overflow-hidden mb-14"
+          style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
+        >
+          <div
+            className="flex items-center justify-center gap-4 px-6 py-5"
+            style={{
+              background: 'linear-gradient(90deg, var(--muted) 0%, var(--secondary) 50%, var(--background) 100%)',
+              borderBottom: '1px solid var(--border)',
+            }}
+          >
+            {HONOREES.map((person) => (
+              <span key={person.name} style={{ fontSize: '1.75rem' }} title={person.name}>{person.icon}</span>
+            ))}
+          </div>
 
-              {/* Thank-you message area */}
-              <div className="px-6 py-5">
-                <label className="section-label mb-2 block">Personal message of thanks</label>
-                <StaticField rows={4} value={person.message} />
-              </div>
-            </div>
-          ))}
+          <div className="px-6 py-6">
+            <span className="section-label mb-1 block">To Everyone Who Made This Possible</span>
+            <p className="text-xs mb-4" style={{ color: 'var(--muted-foreground)' }}>
+              {HONOREES.map((p) => p.name).join(' · ')}
+            </p>
+            <StaticField
+              rows={8}
+              value="Thank you to Dr. Sanethia Thomas, our faculty advisor, for guiding Penguin Intelligence through every weekly check-in and pushing us to keep the client's actual needs at the center of the build. To Ping Neo and Naomi Harrell, for the program support and coordination — the logistics, structure, and behind-the-scenes work that kept three students accountable across ten weeks and a continent, and let us focus on the work in front of us. To EDU Africa, for the local infrastructure, knowledge, and on-the-ground partnership that made it possible for us to land in Cape Town and do work that actually mattered. And to Safe Cities Permaculture — for trusting three students with a real problem, for your patience during our first rough interviews, for honest usability feedback, and for welcoming us onto the farm in Elsies River. Building Elsie for you was the best part of this program."
+            />
+          </div>
         </div>
 
         {/* Additional thanks */}
