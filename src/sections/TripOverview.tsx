@@ -89,7 +89,7 @@ export default function TripOverview() {
             <Field
               label="Program name & organization"
               placeholder="e.g. EDU Africa Summer Research Program — describe the program, who runs it, and what its mission is."
-              value="UF International Scholars Program, a University of Florida study abroad program run in partnership with EDU Africa that pairs CS/CE students with a real nonprofit client for a semester-long software build — from client discovery through final handoff."
+              value="UF SWE and UX Global Internship, a University of Florida study abroad program run in partnership with EDU Africa that pairs CS/CE students with a real nonprofit client for a semester-long software build — from client discovery through final handoff."
               rows={4}
             />
             <Field

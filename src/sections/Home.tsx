@@ -69,7 +69,7 @@ export default function Home() {
                   fontSize: '1rem',
                 }}
               >
-                Ten weeks in Cape Town. A nonprofit that needed better tools.
+                Six weeks in Cape Town. A nonprofit that needed better tools.
                 A team called Penguin Intelligence. An AI assistant we ended up
                 naming Elsie. This is that story.
               </p>
@@ -81,7 +81,7 @@ export default function Home() {
               >
                 {[
                   { label: 'Destination', value: 'Cape Town, South Africa' },
-                  { label: 'Program', value: 'UF International Scholars Program' },
+                  { label: 'Program', value: 'UF SWE and UX Global Internship' },
                   { label: 'Duration', value: 'May – July 2026' },
                   { label: 'Project', value: 'Safe Cities AI Assistant ("Elsie")' },
                 ].map(({ label, value }) => (
@@ -131,6 +131,7 @@ export default function Home() {
               <label className="section-label">In your own words</label>
               <StaticField
                 rows={7}
+                value="I chose South Africa as the destination for my trip because it had AI incorporated into the class, and I wanted to learn how to use AI responsibly on a global scale. I knew I would learn a lot professionally, but I also wanted to pick a place that would challenge my worldview and allow me to become more culturally aware. I knew that going to a country with a culture more similar to mine would not allow me to grow as quickly as picking a country completely different from what I am used to. I wanted to challenge myself and the knowledge I had, and South Africa seemed like the perfect place to begin."
                 placeholder="Write a short introduction — who you are, what this program was, and why you chose South Africa. Set the scene for the reader."
               />
             </div>
@@ -138,6 +139,7 @@ export default function Home() {
               <label className="section-label">What I hoped to find</label>
               <StaticField
                 rows={4}
+                value="I did not know what to expect in terms of climate, culture, history, or nature. I was expecting much warmer weather than I received; it was surprising to land in South Africa and find it so cold outside. For culture, I expected a very friendly culture, but I did not know much about South African customs or beliefs. For history, I expected a deep and scarred history; however, I did not know how much the past still affects the present in the country. For nature, I knew South Africa had many mountains, but I truly underestimated the beauty of Cape Town and the nature it provided."
                 placeholder="What were your expectations, hopes, or intentions before you left? What were you searching for?"
               />
             </div>

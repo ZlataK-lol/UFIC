@@ -125,13 +125,13 @@ export default function AboutMe() {
           <div className="grid grid-cols-2 gap-5">
             <Field
               label="My goals before departing"
-              value="I was not expecting to learn that much personally on the trip. I was hoping to develop myself professionally and allow my career to take off, however, I underestimated the power of culture and community to be as strong as it was. Africa changed me more personally than it did professionally, however, changes in both of those areas were monumental."
+              value="I was not expecting to learn that much personally on the trip. I was hoping to develop myself professionally and allow my career to take off, however, I underestimated the power of culture and community to be as strong as it was. Africa changed me more personally than it did professionally, however, changes in both of those areas were monumental. I wanted real technical experience I could point to and use to launch my tech career, and I expected that to be the main takeaway. I still got that career boost, but it ended up being the smaller half of what I actually gained from the trip."
               placeholder="What were you hoping to gain — academically, professionally, personally? What did you set out to prove or discover?"
               rows={5}
             />
             <Field
               label="Fears & anxieties going in"
-              value="I was nervous to go as I had never truly been that far away from home before. It was scary to think that I would be in a new continent with complete strangers that I had not met before. I was also nervous going into South Africa as you hear a lot of negative things prior to travelling there. However, I gained amazing friends and was able to see the true beauty of Africa for myself and was able to make my own conclusions."
+              value="I was nervous to go as I had never truly been that far away from home before. It was scary to think that I would be in a new continent with complete strangers that I had not met before. I was also nervous going into South Africa as you hear a lot of negative things prior to travelling there. However, I gained amazing friends and was able to see the true beauty of Africa for myself and was able to make my own conclusions. I was also nervous about the language barrier and whether I would be able to communicate easily with everyone I met, and I worried about how reliable the internet and technology would be for the kind of work I needed to do. In the end, none of those fears held me back the way I expected them to."
               placeholder="What made you nervous? Language barriers, unfamiliar environments, being far from home, technology culture differences?"
               rows={5}
             />

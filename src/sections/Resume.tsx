@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
           <Field
             label="Personal Statement"
-            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to technology that solves problems for the people who need it most rather than the people it's easiest to build for. Ten weeks building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening before writing a line of code, and that real resilience isn't finding the ideal setup — it's redesigning around the constraints you're actually handed, region by region if you have to."
+            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to technology that solves problems for the people who need it most rather than the people it's easiest to build for. Six weeks building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening before writing a line of code, and that real resilience isn't finding the ideal setup — it's redesigning around the constraints you're actually handed, region by region if you have to."
             placeholder="A concise statement (2–3 sentences) about your academic identity and aspirations, informed by your study abroad experience."
             rows={4}
           />
@@ -115,7 +115,7 @@ export default function Resume() {
             <div style={{ borderTop: '1px dashed var(--border)', paddingTop: '1.25rem' }}>
               <span className="section-label mb-2 block">Abroad Placement</span>
               <div className="grid grid-cols-2 gap-4">
-                <InputField label="Institution" value="UF International Scholars Program (with EDU Africa)" placeholder="Host university / program" />
+                <InputField label="Institution" value="UF SWE and UX Global Internship (with EDU Africa)" placeholder="Host university / program" />
                 <InputField label="Location" value="Cape Town, South Africa" placeholder="City, Country" />
                 <InputField label="Dates" value="May – July 2026" placeholder="e.g. Jan – May 2024" />
                 <InputField label="Program / Focus" value="Applied software engineering practicum for a nonprofit client" placeholder="e.g. Mediterranean Studies" />
