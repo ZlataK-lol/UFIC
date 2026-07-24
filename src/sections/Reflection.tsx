@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { PhotoSlot } from '../components/PhotoSlot'
 import { StaticField } from '../components/StaticField'
 
@@ -7,32 +6,6 @@ function Field({ label, value, placeholder, rows = 4 }: { label: string; value?:
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
       <StaticField rows={rows} placeholder={placeholder} value={value} />
-    </div>
-  )
-}
-
-function RatingRow({ label }: { label: string }) {
-  const [val, setVal] = useState(0)
-  return (
-    <div className="flex items-center justify-between gap-4 py-2" style={{ borderBottom: '1px dashed var(--border)' }}>
-      <span className="text-sm" style={{ color: 'var(--foreground)' }}>{label}</span>
-      <div className="flex gap-1">
-        {[1, 2, 3, 4, 5].map((n) => (
-          <button
-            key={n}
-            onClick={() => setVal(n)}
-            className="w-7 h-7 rounded-full text-xs transition-colors"
-            style={{
-              background: n <= val ? 'var(--accent)' : 'var(--secondary)',
-              border: '1px solid var(--border)',
-              color: n <= val ? 'var(--accent-foreground)' : 'var(--muted-foreground)',
-              cursor: 'pointer',
-            }}
-          >
-            {n}
-          </button>
-        ))}
-      </div>
     </div>
   )
 }
@@ -82,37 +55,6 @@ export default function Reflection() {
         </div>
       </div>
 
-      {/* Self-assessment ratings */}
-      <div
-        className="p-6 rounded mb-12"
-        style={{ background: 'var(--secondary)', border: '1px solid var(--border)' }}
-      >
-        <span className="section-label mb-4 block">Self-Assessment (1 = not at all, 5 = tremendously)</span>
-        <div className="grid grid-cols-2 gap-x-10">
-          <div>
-            {[
-              'I stepped outside my comfort zone',
-              'I engaged with local culture authentically',
-              'I built meaningful relationships',
-              'I grew academically',
-              'I managed homesickness well',
-            ].map((l) => <RatingRow key={l} label={l} />)}
-          </div>
-          <div>
-            {[
-              'I was open to new experiences',
-              'I practiced independence and self-reliance',
-              'I developed language skills',
-              'I managed my time and responsibilities',
-              'Overall, I made the most of this opportunity',
-            ].map((l) => <RatingRow key={l} label={l} />)}
-          </div>
-        </div>
-        <div className="mt-6">
-          <Field label="Anything you'd rate yourself poorly on — and why?" placeholder="Be honest. What do you wish you'd done more of, less of, or differently? This is your space to be real with yourself." rows={3} />
-        </div>
-      </div>
-
       {/* Academic & professional impact */}
       <div className="grid grid-cols-2 gap-8 mb-12">
         <Field label="Academic impact" value="Coursework teaches you the shape of a RAG pipeline or a hybrid search algorithm in the abstract; building Elsie taught me what actually breaks when you deploy that shape against a real client's Drive full of inconsistent, unlabeled documents. It grounded the theory from my AI certificate coursework in a system where correctness is measured by whether a real Safe Cities staff member gets the right answer — not by whether a test case passes." placeholder="How did studying abroad enrich your field of study? New perspectives, methodologies, case studies, or sources you encountered." rows={5} />
@@ -130,26 +72,6 @@ export default function Reflection() {
           <PhotoSlot label="Arrival back home" src="/photos/arrival-home.jpg" height={200} />
         </div>
         <Field label="The last days" placeholder="Describe your final days abroad. The farewells, the last meals, the emotional weight of leaving. What did you promise yourself you'd remember?" rows={4} />
-      </div>
-
-      {/* Letters */}
-      <div
-        className="p-6 rounded mb-12"
-        style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-      >
-        <span className="section-label mb-5 block">Letters</span>
-        <div className="grid grid-cols-2 gap-6">
-          <Field
-            label="A letter to your pre-departure self"
-            placeholder="Dear me before the trip — here's what I wish I'd known. What advice, reassurance, or warnings would you give yourself?"
-            rows={8}
-          />
-          <Field
-            label="A letter to a future student going abroad"
-            placeholder="To someone about to embark on this same journey — what do you want them to know? What advice would you give a stranger?"
-            rows={8}
-          />
-        </div>
       </div>
 
       {/* Gratitude & goals */}

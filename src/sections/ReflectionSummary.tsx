@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { DiamondRow, Protea, AfricanSun, SAPatternBg, NdebeleFrame, ZuluShield } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
 import { StaticField } from '../components/StaticField'
@@ -8,33 +7,6 @@ function Field({ label, value, placeholder, rows = 4 }: { label: string; value?:
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
       <StaticField rows={rows} placeholder={placeholder} value={value} />
-    </div>
-  )
-}
-
-function RatingRow({ label }: { label: string }) {
-  const [val, setVal] = useState(0)
-  return (
-    <div className="flex items-center justify-between gap-4 py-2.5" style={{ borderBottom: '1px dashed var(--border)' }}>
-      <span className="text-sm diamond" style={{ color: 'var(--foreground)' }}>{label}</span>
-      <div className="flex gap-1.5">
-        {[1, 2, 3, 4, 5].map((n) => (
-          <button
-            key={n}
-            onClick={() => setVal(n)}
-            className="w-8 h-8 rounded-full text-xs font-semibold transition-all"
-            style={{
-              background: n <= val ? 'var(--accent)' : 'var(--secondary)',
-              border: n <= val ? '2px solid var(--accent)' : '1.5px solid var(--border)',
-              color: n <= val ? 'white' : 'var(--muted-foreground)',
-              cursor: 'pointer',
-              transform: n <= val ? 'scale(1.1)' : 'scale(1)',
-            }}
-          >
-            {n}
-          </button>
-        ))}
-      </div>
     </div>
   )
 }
@@ -134,37 +106,6 @@ export default function ReflectionSummary() {
           </div>
         </div>
 
-        {/* Self-assessment */}
-        <div
-          className="p-6 rounded-lg mb-12"
-          style={{ background: 'var(--secondary)', border: '1px solid var(--border)' }}
-        >
-          <div className="flex items-center gap-3 mb-5">
-            <DiamondRow count={3} />
-            <span className="section-label">Self-Assessment (1 = not at all · 5 = completely)</span>
-          </div>
-          <div className="grid grid-cols-2 gap-x-10">
-            <div>
-              {[
-                'I engaged authentically with South African culture',
-                'I contributed meaningfully to the project',
-                'I practiced empathy and cultural humility',
-                'I grew as a software developer',
-                'I challenged my own biases and assumptions',
-              ].map((l) => <RatingRow key={l} label={l} />)}
-            </div>
-            <div>
-              {[
-                'I was a strong team collaborator',
-                'I made the most of every opportunity',
-                'I developed real cross-cultural competency',
-                'The application we built will have lasting impact',
-                'I would recommend this program to others',
-              ].map((l) => <RatingRow key={l} label={l} />)}
-            </div>
-          </div>
-        </div>
-
         {/* Before & after */}
         <div className="mb-12">
           <span className="section-label mb-5 block">Before & After</span>
@@ -201,26 +142,6 @@ export default function ReflectionSummary() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Letters */}
-        <div
-          className="p-6 rounded-lg mb-12"
-          style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-        >
-          <span className="section-label mb-5 block">Letters</span>
-          <div className="grid grid-cols-2 gap-6">
-            <Field
-              label="A letter to your pre-departure self"
-              placeholder="Dear me before South Africa — here is what I wish I had known. What would you warn, reassure, or encourage yourself about?"
-              rows={8}
-            />
-            <Field
-              label="A letter to a future program participant"
-              placeholder="To someone about to embark on this same journey to South Africa — what do you want them to know, feel, prepare for?"
-              rows={8}
-            />
           </div>
         </div>
 

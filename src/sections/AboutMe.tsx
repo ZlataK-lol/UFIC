@@ -2,11 +2,11 @@ import { Protea, DiamondRow, SAPatternBg } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
 import { StaticField } from '../components/StaticField'
 
-function Field({ label, placeholder, rows = 3 }: { label: string; placeholder: string; rows?: number }) {
+function Field({ label, value, placeholder, rows = 3 }: { label: string; value?: string; placeholder: string; rows?: number }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <StaticField rows={rows} placeholder={placeholder} />
+      <StaticField rows={rows} placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -60,6 +60,35 @@ export default function AboutMe() {
             <Field label="Who I am" placeholder="Tell us about yourself — your background, your interests, what drives you as a person and a technologist." rows={4} />
             <Field label="Why South Africa, why this program" placeholder="What drew you to this specific program? Was it a lifelong curiosity, a recommendation, or something you read? What made you say yes?" rows={4} />
           </div>
+        </div>
+
+        {/* School involvement & activities */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-5">
+            <Protea size={32} opacity={0.7} />
+            <span className="section-label">School Involvement & Activities</span>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mb-5">
+            {[
+              { org: 'Women in Computer Science and Engineering (WiCSE)', role: 'Outreach Director', dates: 'Aug 2025 – Present' },
+              { org: 'WingHacks Hackathon — PhishHook', role: 'Frontend Developer', dates: 'May 2026' },
+              { org: 'Russian Cultural Club', role: 'Member', dates: 'Jan 2026 – Present' },
+              { org: 'Safe Cities Permaculture', role: 'Frontend Developer & AI Chatbot Design Intern', dates: 'May 2026 – Present' },
+              { org: 'Eagle Harbor Aquatics', role: 'Lead Lifeguard and Swim Instructor', dates: 'June 2023 – Present' },
+            ].map(({ org, role, dates }) => (
+              <div key={org} className="sa-card">
+                <div style={{ fontWeight: 700, color: 'var(--foreground)', fontSize: '0.9375rem' }}>{org}</div>
+                <div className="section-label mt-1">{role}</div>
+                <div className="text-xs mt-1" style={{ color: 'var(--muted-foreground)' }}>{dates}</div>
+              </div>
+            ))}
+          </div>
+          <Field
+            label="How these activities shape who I am"
+            value="As Outreach Director for WiCSE, I recruit mentors and judges and lead workshops to grow participation in CS/CE — work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive phishing simulator. Between WiCSE, WingHacks, my internship at Safe Cities, and years of teaching people to swim at Eagle Harbor, the common thread is the same: I gravitate toward roles where I'm building or teaching for someone whose starting point isn't my own."
+            placeholder="How do your clubs, activities, and jobs outside the classroom connect to who you are and what you care about?"
+            rows={4}
+          />
         </div>
 
         {/* Deeper reflection */}
