@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { DiamondRow, Protea, AfricanSun, SAPatternBg } from '../components/SADecor'
 import { StaticField } from '../components/StaticField'
+import { withBase } from '../lib/withBase'
 
 const CATEGORIES = ['All', 'Landscapes', 'Team', 'Culture', 'Project', 'Food', 'Architecture']
 
@@ -37,7 +38,7 @@ function GalleryCard({ photo }: { photo: Photo }) {
   const [captionOpen, setCaptionOpen] = useState(false)
   const [autoFailed, setAutoFailed] = useState(false)
 
-  const autoSrc = `/photos/gallery/${photo.filename}`
+  const autoSrc = withBase(`/photos/gallery/${photo.filename}`)
   const shown = !autoFailed ? autoSrc : null
 
   return (
@@ -93,7 +94,7 @@ function GalleryCard({ photo }: { photo: Photo }) {
 
 function FeaturedPhoto({ photo }: { photo: Photo }) {
   const [autoFailed, setAutoFailed] = useState(false)
-  const autoSrc = `/photos/gallery/${photo.filename}`
+  const autoSrc = withBase(`/photos/gallery/${photo.filename}`)
   const shown = !autoFailed ? autoSrc : null
   return (
     <div

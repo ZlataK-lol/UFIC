@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { withBase } from '../lib/withBase'
 
 /**
  * A static photo slot that shows the image at `src` (e.g. "/photos/team-farm.jpg").
@@ -21,7 +22,7 @@ export function PhotoSlot({
 }) {
   const [autoFailed, setAutoFailed] = useState(false)
 
-  const shown = src && !autoFailed ? src : null
+  const shown = src && !autoFailed ? withBase(src) : null
 
   return (
     <div className="photo-slot" style={tall ? { aspectRatio: '3 / 4' } : { height }}>
