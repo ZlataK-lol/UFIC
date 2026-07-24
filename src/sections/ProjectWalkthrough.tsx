@@ -223,11 +223,7 @@ export default function ProjectWalkthrough() {
               style={{ background: 'var(--secondary)', border: '1px dashed var(--border)' }}
             >
               <span style={{ fontSize: '2.5rem' }}>▶</span>
-              <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>Paste a YouTube / Vimeo link or describe your demo</span>
               <StaticField value="https://afc-estate.vercel.app" style={{ maxWidth: '400px' }} />
-            </div>
-            <div className="mt-4">
-              <Field label="Demo narration / script" placeholder="Describe what happens in your demo video, or walk through the demo as if narrating it to a stakeholder." rows={4} />
             </div>
           </div>
         </NdebeleFrame>

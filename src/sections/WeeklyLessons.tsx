@@ -59,9 +59,10 @@ const WEEKS = [
     dates: 'Jun 22 – Jun 28',
     title: 'Cloud Infrastructure on Azure',
     color: '#4a9ab5',
+    photoCount: 10,
     time: 'Roughly 10–11 hours.',
-    contribution: 'Attended an Amazon workshop on cloud and AI tooling early in the week, then configured Microsoft Azure AI Foundry using a $2,000 nonprofit grant, evaluated AI models on cost, efficiency, and safety, and deployed models across two regions after discovering key models weren\'t available in South Africa.',
-    reflection: 'Learned how to problem-solve without reliable vendor support close at hand, and how to restructure a project around real-world regional constraints instead of what the documentation quietly assumes about where you\'re deploying from. Evaluating models on cost, efficiency, and safety against a fixed $2,000 grant also taught me to treat budget as a design constraint from the start, not an afterthought to optimize once something already works. The !Khwa ttu San Heritage Centre visit this week reframed how far back the region\'s history actually goes, long before anything we\'d covered so far.',
+    contribution: 'Attended an Amazon workshop on cloud and AI tooling early in the week, where our team put together our own deliverable project applying what we\'d just learned instead of just sitting through slides. Then configured Microsoft Azure AI Foundry using a $2,000 nonprofit grant, evaluated AI models on cost, efficiency, and safety, and deployed models across two regions after discovering key models weren\'t available in South Africa.',
+    reflection: 'Learned how to problem-solve without reliable vendor support close at hand, and how to restructure a project around real-world regional constraints instead of what the documentation quietly assumes about where you\'re deploying from. Evaluating models on cost, efficiency, and safety against a fixed $2,000 grant also taught me to treat budget as a design constraint from the start, not an afterthought to optimize once something already works. The AWS workshop earlier in the week ended up being more useful than I expected going in: seeing how Amazon lays out compute, storage, and AI services side by side gave me a much clearer picture of cloud computing in general, not just the Azure stack we ended up building on, and made the rest of the week\'s migration work easier to actually reason about instead of just following documentation. The !Khwa ttu San Heritage Centre visit this week reframed how far back the region\'s history actually goes, long before anything we\'d covered so far.',
     lesson: 'Resilience means redesigning around constraints, not waiting for the ideal setup.',
     culture: [
       { activity: '!Khwa ttu San Heritage Centre', note: 'Learning about San culture and history, the region\'s original inhabitants, was a perspective the rest of the program hadn\'t covered yet, and it reframed how far back Cape Town\'s layered history actually goes.' },
@@ -74,6 +75,7 @@ const WEEKS = [
     dates: 'Jun 29 – Jul 5',
     title: 'Testing & Iteration',
     color: '#86C5D8',
+    photoCount: 9,
     time: 'About 8–9 hours: 2–3 hours researching and running usability testing, 2 hours setting up Microsoft account details, and 3 hours fixing smaller site issues, plus coordinating team meetings and status updates throughout the week.',
     contribution: 'Delivered Presentation 3: Project Update to the class, then helped run usability testing using SUS and other user-analysis tools, including interviewing a classmate and helping put together the report. Set up Microsoft account details for the client, including budget-warning email alerts and other account configuration. Also fixed a number of smaller site issues, including cleaning up wording, updating program information, swapping in new company photos, and requiring a photo on marketplace posts. Alongside this, planned team meetings and kept everyone up to date on where the project stood.',
     reflection: 'Learned how to actually conduct usability testing. Not just running through a checklist, but making sure a program is accessible and genuinely useful to different kinds of users, not just functional in the abstract. Also learned how to voice concerns during peer testing constructively: several classmates asked me to review their sites, and I had to learn to pair honest criticism with real compliments so the feedback landed without anyone feeling attacked. Beyond that, learned how to take testing responses and actually translate them into concrete changes to the site, plus a handful of new Microsoft account features, like setting up budget-watching alerts. A guest lecture on AI in education from Louise Nivison landed right in the middle of our own AI build, a useful reminder that the ethical questions around AI weren\'t unique to our project.',
@@ -89,6 +91,7 @@ const WEEKS = [
     dates: 'Jul 6 – Jul 12',
     title: 'Final Presentations & Client Testing',
     color: '#ADD8E6',
+    photoCount: 6,
     time: 'About 9 hours: 7 on presentation prep, 2 speaking with the client.',
     contribution: 'Completed slides for the final presentations, tested with the client after usability testing to measure how much more efficient the app made their process, and walked them through specific features in detail. Also completed Transformation Questionnaire 2 and sat through a reflection & feedback session as part of the program\'s formal close.',
     reflection: 'Learned a lot about myself as a presenter in this final week. Noticeably less stressed walking into a big presentation than I\'d been back in week one, and able to actually enjoy the client conversation instead of just surviving it. Also learned to ask very specific questions of a non-technical client, translating vague concerns like "it feels slow" or "this is confusing" into concrete, buildable feature requirements, a translation skill that took the full six weeks to sharpen. Djembe drumming and dinner at GOLD the night before our final presentations felt like the right send-off before the highest-stakes week of the internship.',
@@ -165,9 +168,14 @@ export default function WeeklyLessons() {
                   <div className="px-6 py-6" style={{ background: 'var(--background)' }}>
                     {/* Photos row */}
                     <div className="grid grid-cols-3 gap-4 mb-6">
-                      <PhotoSlot label={`Week ${week.num} highlight 1`} src={`/photos/week-${week.num}-1.jpg`} height={150} />
-                      <PhotoSlot label={`Week ${week.num} highlight 2`} src={`/photos/week-${week.num}-2.jpg`} height={150} />
-                      <PhotoSlot label={`Week ${week.num} highlight 3`} src={`/photos/week-${week.num}-3.jpg`} height={150} />
+                      {Array.from({ length: week.photoCount ?? 3 }).map((_, i) => (
+                        <PhotoSlot
+                          key={i}
+                          label={`Week ${week.num} highlight ${i + 1}`}
+                          src={`/photos/week-${week.num}-${i + 1}.jpg`}
+                          height={150}
+                        />
+                      ))}
                     </div>
 
                     {/* Real report fields */}
