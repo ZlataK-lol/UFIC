@@ -141,6 +141,9 @@ export default function App() {
         <p className="mt-1 text-xs" style={{ color: 'var(--muted-foreground)' }}>
           Study Abroad Portfolio &nbsp;·&nbsp; South Africa 2026
         </p>
+        <p className="mt-3 text-xs" style={{ color: 'var(--foreground)', fontFamily: '"Playfair Display", Georgia, serif' }}>
+          Zlata Kovrigina
+        </p>
       </footer>
     </div>
   )

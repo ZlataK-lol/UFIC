@@ -154,6 +154,7 @@ export default function ReflectionSummary() {
               className="text-field text-center"
               rows={6}
               style={{ fontSize: '1.0625rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif', maxWidth: '600px', margin: '0 auto' }}
+              value="This is a chapter in my life I will never forget. From the amazing experiences to the people. Technology in America is focused on fancy features and corporations. But in South Africa, technology is rooted in people and usability. The difference between the two is astronomical. I felt as though I was making a true difference, I was making changes that mattered. I got to see my program make actual improvements to the community, and I am forever grateful for the experience I had and for the knowledge I gained."
               placeholder="Your final words — a quote, a truth you carry, or simply how you choose to close this chapter of your story."
             />
             <div className="mt-5">
