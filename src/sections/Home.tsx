@@ -1,5 +1,6 @@
 import { Protea, DiamondRow, AfricanSun, SAPatternBg, NdebeleDivider, ZuluShield } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 export default function Home() {
   return (
@@ -86,9 +87,8 @@ export default function Home() {
                 ].map(({ label, value }) => (
                   <div key={label}>
                     <div className="section-label" style={{ color: 'rgba(173,216,230,0.8)' }}>{label}</div>
-                    <input
-                      readOnly
-                      type="text"
+                    <StaticField
+                      value={value}
                       className="text-field mt-1"
                       style={{
                         background: 'rgba(240,248,255,0.06)',
@@ -97,7 +97,6 @@ export default function Home() {
                         fontSize: '0.875rem',
                         padding: '0.4rem 0.6rem',
                       }}
-                      defaultValue={value}
                     />
                   </div>
                 ))}
@@ -107,12 +106,10 @@ export default function Home() {
             {/* Right: cover photo */}
             <div className="flex flex-col gap-4">
               <PhotoSlot label="Your cover photo — South Africa" src="/photos/cover.jpg" tall />
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={2}
-                style={{ background: 'rgba(240,248,255,0.08)', border: '1px solid rgba(173,216,230,0.2)', color: '#F0F8FF' }}
                 placeholder="Caption: where was this photo taken?"
+                style={{ background: 'rgba(240,248,255,0.08)', border: '1px solid rgba(173,216,230,0.2)', color: '#F0F8FF' }}
               />
             </div>
           </div>
@@ -132,18 +129,14 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">In your own words</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={7}
                 placeholder="Write a short introduction — who you are, what this program was, and why you chose South Africa. Set the scene for the reader."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">What I hoped to find</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={4}
                 placeholder="What were your expectations, hopes, or intentions before you left? What were you searching for?"
               />
@@ -158,9 +151,7 @@ export default function Home() {
               <PhotoSlot label="Landing / airport" src="/photos/landing-airport.jpg" />
               <PhotoSlot label="First view of SA" src="/photos/first-view-sa.jpg" />
             </div>
-            <textarea
-              readOnly
-              className="text-field"
+            <StaticField
               rows={3}
               placeholder="Describe the moment you landed. What did you see, hear, feel in those first hours in South Africa?"
             />

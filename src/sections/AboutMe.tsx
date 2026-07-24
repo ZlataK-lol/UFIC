@@ -1,11 +1,12 @@
 import { Protea, DiamondRow, SAPatternBg } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 function Field({ label, placeholder, rows = 3 }: { label: string; placeholder: string; rows?: number }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} />
+      <StaticField rows={rows} placeholder={placeholder} />
     </div>
   )
 }
@@ -52,7 +53,7 @@ export default function AboutMe() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
                   <label className="section-label">{label}</label>
-                  <input readOnly type="text" className="text-field" defaultValue={value} />
+                  <StaticField value={value} />
                 </div>
               ))}
             </div>

@@ -59,7 +59,7 @@ export default function App() {
                 fontStyle: 'italic',
               }}
             >
-              South Africa &rsquo;24
+              South Africa &rsquo;26
             </span>
           </div>
           <ul className="flex gap-5 flex-wrap">
@@ -139,7 +139,7 @@ export default function App() {
           Ubuntu — I am because we are
         </p>
         <p className="mt-1 text-xs" style={{ color: 'var(--muted-foreground)' }}>
-          Study Abroad Portfolio &nbsp;·&nbsp; South Africa 2024
+          Study Abroad Portfolio &nbsp;·&nbsp; South Africa 2026
         </p>
       </footer>
     </div>

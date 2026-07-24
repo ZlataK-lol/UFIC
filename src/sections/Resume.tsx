@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { StaticField } from '../components/StaticField'
 
 function InputField({ label, value, placeholder, wide = false }: { label: string; value?: string; placeholder: string; wide?: boolean }) {
   return (
     <div className={`flex flex-col gap-1.5 ${wide ? 'col-span-2' : ''}`}>
       <label className="section-label">{label}</label>
-      <input readOnly type="text" className="text-field" placeholder={placeholder} defaultValue={value} />
+      <StaticField placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -13,7 +14,7 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <StaticField rows={rows} placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -46,7 +47,7 @@ function RepeatEntry({ fields, defaults = [] }: { fields: Array<{ label: string;
           {fields.map((f) => (
             <div key={f.label} className="flex flex-col gap-1">
               <label className="section-label">{f.label} {i + 1}</label>
-              <input readOnly type="text" className="text-field" placeholder={f.placeholder} defaultValue={defaults[i]?.[f.label]} />
+              <StaticField placeholder={f.placeholder} value={defaults[i]?.[f.label]} />
             </div>
           ))}
         </div>

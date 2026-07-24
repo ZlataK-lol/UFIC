@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { DiamondRow, Protea, AfricanSun, SAPatternBg } from '../components/SADecor'
+import { StaticField } from '../components/StaticField'
 
 const CATEGORIES = ['All', 'Landscapes', 'Team', 'Culture', 'Project', 'Food', 'Architecture']
 
@@ -79,12 +80,10 @@ function GalleryCard({ photo }: { photo: Photo }) {
           {captionOpen ? 'Hide caption' : 'Show caption'}
         </button>
         {captionOpen && (
-          <textarea
-            readOnly
-            className="text-field"
+          <StaticField
             rows={2}
             style={{ fontSize: '0.8125rem' }}
-            defaultValue={photo.caption}
+            value={photo.caption}
           />
         )}
       </div>
@@ -154,8 +153,7 @@ export default function PhotoGallery() {
         <div className="mb-10">
           <span className="section-label mb-3 block">Featured Photo</span>
           <FeaturedPhoto photo={photos[0]} />
-          <textarea
-            readOnly
+          <StaticField
             className="text-field mt-3"
             rows={2}
             placeholder="Caption for your featured photo — what made this moment the one?"
@@ -198,11 +196,11 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 gap-5">
             <div className="flex flex-col gap-1.5">
               <label className="section-label">The photo that captures it all</label>
-              <textarea readOnly className="text-field" rows={4} placeholder="Which photo best encapsulates your entire experience, and why? What story does it tell without words?" />
+              <StaticField rows={4} placeholder="Which photo best encapsulates your entire experience, and why? What story does it tell without words?" />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">What the camera couldn't capture</label>
-              <textarea readOnly className="text-field" rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice — something that lives only in your memory." />
+              <StaticField rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice — something that lives only in your memory." />
             </div>
           </div>
         </div>

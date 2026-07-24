@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { DiamondRow, Protea, AfricanSun, SAPatternBg, NdebeleFrame, ZuluShield } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 function Field({ label, value, placeholder, rows = 4 }: { label: string; value?: string; placeholder: string; rows?: number }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <StaticField rows={rows} placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -83,9 +84,7 @@ export default function ReflectionSummary() {
           </div>
           <div className="flex flex-col gap-4">
             <PhotoSlot label="A photo that represents your transformation" src="/photos/transformation.jpg" height={280} />
-            <textarea
-              readOnly
-              className="text-field"
+            <StaticField
               rows={2}
               placeholder="Why did you choose this image to represent your journey?"
             />
@@ -129,7 +128,7 @@ export default function ReflectionSummary() {
                     {theme}
                   </span>
                 </div>
-                <textarea readOnly className="text-field" rows={5} defaultValue={text} />
+                <StaticField rows={5} value={text} />
               </div>
             ))}
           </div>
@@ -182,7 +181,7 @@ export default function ReflectionSummary() {
               ].map(([label, placeholder]) => (
                 <div key={label as string} className="mb-4">
                   <label className="section-label">{label as string}</label>
-                  <textarea readOnly className="text-field mt-1" rows={2} placeholder={placeholder as string} />
+                  <StaticField className="text-field mt-1" rows={2} placeholder={placeholder as string} />
                 </div>
               ))}
             </div>
@@ -198,7 +197,7 @@ export default function ReflectionSummary() {
               ].map(([label, placeholder]) => (
                 <div key={label as string} className="mb-4">
                   <label className="section-label">{label as string}</label>
-                  <textarea readOnly className="text-field mt-1" rows={2} placeholder={placeholder as string} />
+                  <StaticField className="text-field mt-1" rows={2} placeholder={placeholder as string} />
                 </div>
               ))}
             </div>
@@ -230,8 +229,7 @@ export default function ReflectionSummary() {
           <div className="py-8 px-6 text-center">
             <Protea size={48} opacity={0.5} />
             <span className="section-label mb-3 block mt-2">Closing Statement</span>
-            <textarea
-              readOnly
+            <StaticField
               className="text-field text-center"
               rows={6}
               style={{ fontSize: '1.0625rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif', maxWidth: '600px', margin: '0 auto' }}

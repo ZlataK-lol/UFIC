@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { DiamondRow, NdebeleFrame, Protea, SAPatternBg } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 // Covers only the weeks physically in Cape Town: kickoff through final
 // presentations. Planning and the client interview happened before
@@ -143,15 +144,15 @@ export default function WeeklyLessons() {
                     <div className="grid grid-cols-2 gap-5">
                       <div className="flex flex-col gap-1.5">
                         <label className="section-label">Time dedicated</label>
-                        <textarea readOnly className="text-field" rows={2} defaultValue={week.time} />
+                        <StaticField rows={2} value={week.time} />
                       </div>
                       <div className="flex flex-col gap-1.5">
                         <label className="section-label">Contribution to the project</label>
-                        <textarea readOnly className="text-field" rows={4} defaultValue={week.contribution} />
+                        <StaticField rows={4} value={week.contribution} />
                       </div>
                       <div className="flex flex-col gap-1.5" style={{ gridColumn: '1 / -1' }}>
                         <label className="section-label">Reflection & lessons learned</label>
-                        <textarea readOnly className="text-field" rows={4} defaultValue={week.reflection} />
+                        <StaticField rows={4} value={week.reflection} />
                       </div>
                     </div>
 
@@ -163,12 +164,10 @@ export default function WeeklyLessons() {
                             <Protea size={28} opacity={0.7} />
                             <span className="section-label">✦ The Lesson of Week {week.num}</span>
                           </div>
-                          <textarea
-                            readOnly
-                            className="text-field"
+                          <StaticField
                             rows={2}
                             style={{ fontSize: '1rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif' }}
-                            defaultValue={week.lesson}
+                            value={week.lesson}
                           />
                         </div>
                       </NdebeleFrame>
@@ -190,20 +189,16 @@ export default function WeeklyLessons() {
           <div className="grid grid-cols-2 gap-5 relative z-10">
             <div className="flex flex-col gap-1.5">
               <label className="section-label">The arc of my growth</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={5}
-                defaultValue="I arrived already having interviewed the client remotely, but the six weeks on the ground were where the work — and the growth — actually happened. I went from setting up someone else's project environment to redesigning the AI assistant's cloud infrastructure around constraints no one had planned for, and I ended those six weeks presenting confidently to the client on July 12th, in a way that would have felt out of reach in week one."
+                value="I arrived already having interviewed the client remotely, but the six weeks on the ground were where the work — and the growth — actually happened. I went from setting up someone else's project environment to redesigning the AI assistant's cloud infrastructure around constraints no one had planned for, and I ended those six weeks presenting confidently to the client on July 12th, in a way that would have felt out of reach in week one."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Lessons I'll carry into my career</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={5}
-                defaultValue="Plan before you build, especially when the plan will save you from redoing the same screen three times. Real infrastructure is messy — resilience means redesigning around constraints, not waiting for ideal conditions. And presentation skills are built the same way software is: iteration, not talent."
+                value="Plan before you build, especially when the plan will save you from redoing the same screen three times. Real infrastructure is messy — resilience means redesigning around constraints, not waiting for ideal conditions. And presentation skills are built the same way software is: iteration, not talent."
               />
             </div>
           </div>

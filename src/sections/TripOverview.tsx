@@ -1,11 +1,12 @@
 import { Protea, DiamondRow, AfricanSun, SAPatternBg, ZuluShield } from '../components/SADecor'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 function Field({ label, value, placeholder, rows = 3 }: { label: string; value?: string; placeholder: string; rows?: number }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <StaticField rows={rows} placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -69,13 +70,12 @@ export default function TripOverview() {
                   lineHeight: 1,
                 }}
               >
-                <input
-                  readOnly
-                  type="text"
-                  defaultValue={value}
-                  className="w-full text-center bg-transparent border-none outline-none text-2xl font-bold"
+                <div
+                  className="w-full text-center text-2xl font-bold"
                   style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--accent)' }}
-                />
+                >
+                  {value}
+                </div>
               </div>
               <div className="text-xs mt-1" style={{ color: 'var(--muted-foreground)' }}>{label}</div>
             </div>
@@ -191,7 +191,7 @@ export default function TripOverview() {
                       <span className="section-label">{week}</span>
                       <span style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '0.875rem' }}>{label}</span>
                     </div>
-                    <textarea readOnly className="text-field" rows={2} defaultValue={text} />
+                    <StaticField rows={2} value={text} />
                   </div>
                 </div>
               ))}

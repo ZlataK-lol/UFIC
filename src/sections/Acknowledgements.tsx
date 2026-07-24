@@ -1,4 +1,5 @@
 import { DiamondRow, Protea, AfricanSun, SAPatternBg, NdebeleFrame, ZuluShield } from '../components/SADecor'
+import { StaticField } from '../components/StaticField'
 
 const HONOREES = [
   {
@@ -30,9 +31,6 @@ const HONOREES = [
     role: 'Elsies River, Western Cape — Community Transformation & Skills Development',
     icon: '🤝',
     message: 'Thank you for trusting three students with a real problem — for the patience during our first rough interviews, for the honest usability feedback, and for welcoming us onto the farm. Building Elsie for you was the best part of this program.',
-    editable: true,
-    namePlaceholder: 'Organization name',
-    rolePlaceholder: 'Their role / mission',
   },
 ]
 
@@ -107,32 +105,10 @@ export default function Acknowledgements() {
               >
                 <span style={{ fontSize: '2rem' }}>{person.icon}</span>
                 <div className="flex-1">
-                  {person.editable ? (
-                    <input
-                      readOnly
-                      type="text"
-                      defaultValue={person.name}
-                      className="bg-transparent border-none outline-none w-full"
-                      style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: '1.2rem', color: 'var(--foreground)', fontWeight: 700 }}
-                      placeholder={person.namePlaceholder}
-                    />
-                  ) : (
-                    <div style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: '1.2rem', color: 'var(--foreground)', fontWeight: 700 }}>
-                      {person.name}
-                    </div>
-                  )}
-                  {person.editable ? (
-                    <input
-                      readOnly
-                      type="text"
-                      defaultValue={person.role}
-                      className="bg-transparent border-none outline-none w-full mt-0.5"
-                      style={{ fontSize: '0.8125rem', color: 'var(--accent)', letterSpacing: '0.05em' }}
-                      placeholder={person.rolePlaceholder}
-                    />
-                  ) : (
-                    <div className="section-label mt-0.5">{person.role}</div>
-                  )}
+                  <div style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: '1.2rem', color: 'var(--foreground)', fontWeight: 700 }}>
+                    {person.name}
+                  </div>
+                  <div className="section-label mt-0.5">{person.role}</div>
                 </div>
                 <DiamondRow count={3} />
               </div>
@@ -140,12 +116,7 @@ export default function Acknowledgements() {
               {/* Thank-you message area */}
               <div className="px-6 py-5">
                 <label className="section-label mb-2 block">Personal message of thanks</label>
-                <textarea
-                  readOnly
-                  className="text-field"
-                  rows={4}
-                  defaultValue={person.message}
-                />
+                <StaticField rows={4} value={person.message} />
               </div>
             </div>
           ))}
@@ -160,36 +131,28 @@ export default function Acknowledgements() {
           <div className="grid grid-cols-2 gap-5">
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Teammates</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={5}
-                defaultValue="Adam Makled (Senior, Comp Sci — Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng — Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
+                value="Adam Makled (Senior, Comp Sci — Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng — Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Local community & South African hosts</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={5}
-                defaultValue="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet — that honesty made the platform better."
+                value="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet — that honesty made the platform better."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Family & friends back home</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={4}
                 placeholder="Who supported you from afar — who did you call when you were overwhelmed or excited? What did their support mean while you were abroad?"
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Others to thank</label>
-              <textarea
-                readOnly
-                className="text-field"
+              <StaticField
                 rows={4}
                 placeholder="Anyone else who played a role — a professor who inspired you, a scholarship that funded you, a book that prepared you, a stranger who showed you kindness."
               />
@@ -230,8 +193,7 @@ export default function Acknowledgements() {
               </p>
               <DiamondRow count={9} />
               <div className="mt-8">
-                <textarea
-                  readOnly
+                <StaticField
                   className="text-field text-center"
                   rows={4}
                   style={{
@@ -240,7 +202,6 @@ export default function Acknowledgements() {
                     color: '#F0F8FF',
                     fontFamily: '"Playfair Display", Georgia, serif',
                     fontSize: '1rem',
-                    fontStyle: 'italic',
                     maxWidth: '500px',
                     margin: '0 auto',
                     display: 'block',

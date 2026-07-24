@@ -124,19 +124,6 @@ body {
   font-family: inherit;
   font-size: 0.9375rem;
   line-height: 1.7;
-  resize: vertical;
-  transition: border-color 0.15s, box-shadow 0.15s;
-  outline: none;
-}
-
-.text-field:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(74,154,181,0.15);
-}
-
-.text-field::placeholder {
-  color: var(--muted-foreground);
-  font-style: italic;
 }
 
 /* Photo placeholder */

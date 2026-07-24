@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { PhotoSlot } from '../components/PhotoSlot'
+import { StaticField } from '../components/StaticField'
 
 function Field({ label, value, placeholder, rows = 4 }: { label: string; value?: string; placeholder: string; rows?: number }) {
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <StaticField rows={rows} placeholder={placeholder} value={value} />
     </div>
   )
 }
@@ -53,9 +54,7 @@ export default function Reflection() {
       <div className="grid gap-8 mb-14" style={{ gridTemplateColumns: '1fr 1fr' }}>
         <div className="flex flex-col gap-4">
           <PhotoSlot label="Your most meaningful photo from the whole trip" src="/photos/most-meaningful.jpg" height={320} />
-          <textarea
-            readOnly
-            className="text-field"
+          <StaticField
             rows={2}
             placeholder="Caption: why this photo above all others?"
           />
@@ -179,8 +178,7 @@ export default function Reflection() {
         >
           A quote, poem, or passage that captures your experience — or simply your own final words.
         </p>
-        <textarea
-          readOnly
+        <StaticField
           className="text-field text-center"
           rows={5}
           style={{ fontSize: '1.0625rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif' }}
