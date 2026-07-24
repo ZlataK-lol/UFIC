@@ -46,7 +46,7 @@ export default function ProjectWalkthrough() {
         </div>
       </div>
 
-      <div className="px-8 py-14 max-w-5xl mx-auto">
+      <div className="px-8 py-14 max-w-7xl mx-auto">
         {/* Project identity */}
         <div
           className="p-6 rounded-lg mb-12 relative overflow-hidden"
@@ -108,7 +108,7 @@ export default function ProjectWalkthrough() {
             <Field label="Deployment" value="MongoDB Atlas for data, hosted app on Vercel, AI service migrated from Google/Render to Microsoft Azure for reliability and to remove cold-start warmup delays." rows={3} placeholder="" />
           </div>
           <div className="mt-5">
-            <PhotoSlot label="Architecture diagram / system diagram" src="/screenshots/architecture-diagram.jpg" height={200} />
+            <PhotoSlot label="Architecture diagram / system diagram" src="/screenshots/architecture-diagram.jpg" aspectRatio="21 / 9" fit="contain" />
           </div>
         </div>
 
@@ -140,16 +140,17 @@ export default function ProjectWalkthrough() {
 
           {SCREENS.map((screen) => (
             activeScreen === screen.id && (
-              <div key={screen.id} className="grid gap-8" style={{ gridTemplateColumns: '1fr 1fr' }}>
-                {/* Screenshots */}
-                <div className="flex flex-col gap-4">
-                  <span className="section-label">{screen.label}</span>
-                  <PhotoSlot label={`${screen.label}: screenshot 1`} src={`/screenshots/${screen.file}-1.jpg`} height={260} />
-                  <PhotoSlot label={`${screen.label}: screenshot 2`} src={`/screenshots/${screen.file}-2.jpg`} height={200} />
+              <div key={screen.id} className="flex flex-col gap-6">
+                <span className="section-label">{screen.label}</span>
+
+                {/* Screenshots: full width, real aspect ratio, nothing cropped or stretched */}
+                <div className="grid gap-4" style={{ gridTemplateColumns: '1fr 1fr' }}>
+                  <PhotoSlot label={`${screen.label}: screenshot 1`} src={`/screenshots/${screen.file}-1.jpg`} aspectRatio="2 / 1" fit="contain" />
+                  <PhotoSlot label={`${screen.label}: screenshot 2`} src={`/screenshots/${screen.file}-2.jpg`} aspectRatio="2 / 1" fit="contain" />
                 </div>
 
                 {/* Description */}
-                <div className="flex flex-col gap-5 pt-7">
+                <div className="grid gap-5" style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
                   <Field
                     label="What this screen does"
                     value={screen.text}

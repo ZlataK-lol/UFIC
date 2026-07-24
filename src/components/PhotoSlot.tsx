@@ -14,23 +14,28 @@ export function PhotoSlot({
   src,
   height = 220,
   tall = false,
+  aspectRatio,
+  fit = 'cover',
 }: {
   label: string
   src?: string
   height?: number
   tall?: boolean
+  aspectRatio?: string
+  fit?: 'cover' | 'contain'
 }) {
   const [autoFailed, setAutoFailed] = useState(false)
 
   const shown = src && !autoFailed ? withBase(src) : null
+  const boxStyle = aspectRatio ? { aspectRatio } : tall ? { aspectRatio: '3 / 4' } : { height }
 
   return (
-    <div className="photo-slot" style={tall ? { aspectRatio: '3 / 4' } : { height }}>
+    <div className="photo-slot" style={boxStyle}>
       {shown ? (
         <img
           src={shown}
           alt={label}
-          className="w-full h-full object-cover absolute inset-0"
+          className={fit === 'contain' ? 'w-full h-full object-contain absolute inset-0' : 'w-full h-full object-cover absolute inset-0'}
           onError={() => setAutoFailed(true)}
         />
       ) : (
