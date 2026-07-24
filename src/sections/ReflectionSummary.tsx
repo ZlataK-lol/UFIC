@@ -116,13 +116,13 @@ export default function ReflectionSummary() {
                 <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--muted-foreground)' }}>Before South Africa</span>
               </div>
               {[
-                ['How I viewed global development', 'I thought technology solutions were...'],
-                ['My understanding of South Africa', 'Before I went, I assumed...'],
-                ['My sense of self as a technologist', 'I saw myself as a developer who...'],
-              ].map(([label, placeholder]) => (
-                <div key={label as string} className="mb-4">
-                  <label className="section-label">{label as string}</label>
-                  <StaticField className="text-field mt-1" rows={2} placeholder={placeholder as string} />
+                { label: 'How I viewed global development', value: 'I thought technology solutions were mostly about clever features and technical sophistication — something you built and then handed to people, rather than something you built with them.' },
+                { label: 'My understanding of South Africa', value: 'Before I went, I mostly knew the negative things people warn you about before traveling there, and not much else — a country defined by its problems rather than its people, its history, or its resilience.' },
+                { label: 'My sense of self as a technologist', value: 'I saw myself as a developer who measured success by what I could build and ship, not by whether anyone on the other end actually needed it.' },
+              ].map(({ label, value }) => (
+                <div key={label} className="mb-4">
+                  <label className="section-label">{label}</label>
+                  <StaticField className="text-field mt-1" rows={2} value={value} />
                 </div>
               ))}
             </div>
@@ -132,13 +132,13 @@ export default function ReflectionSummary() {
                 <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--accent)' }}>After South Africa</span>
               </div>
               {[
-                ['How I now view global development', 'I now understand that technology should...'],
-                ['My understanding of South Africa', 'Now I know that South Africa is...'],
-                ['My sense of self as a technologist', 'I now see myself as someone who...'],
-              ].map(([label, placeholder]) => (
-                <div key={label as string} className="mb-4">
-                  <label className="section-label">{label as string}</label>
-                  <StaticField className="text-field mt-1" rows={2} placeholder={placeholder as string} />
+                { label: 'How I now view global development', value: 'I now understand that technology should be rooted in the people who use it, not the corporation that ships it — human-centered design isn\'t a nice-to-have, it\'s the whole job. Global development isn\'t optional generosity; it\'s a necessity, and helping people is something everyone should make room for.' },
+                { label: 'My understanding of South Africa', value: 'Now I know that South Africa is a country of real depth, resilience, and community that no warning I heard before I left ever captured — the harmful stereotypes I arrived with didn\'t survive contact with the people I actually met.' },
+                { label: 'My sense of self as a technologist', value: 'I now see myself as someone who measures a build by how much it actually helps the community it serves, not by how impressive it looks — and who believes community, not individual achievement, is what technology should ultimately be in service of.' },
+              ].map(({ label, value }) => (
+                <div key={label} className="mb-4">
+                  <label className="section-label">{label}</label>
+                  <StaticField className="text-field mt-1" rows={2} value={value} />
                 </div>
               ))}
             </div>
