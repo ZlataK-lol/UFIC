@@ -76,7 +76,7 @@ export default function ProjectWalkthrough() {
             <span className="section-label">🔍 The Problem</span>
             <StaticField
               rows={5}
-              value="Safe Cities staff were spending significant time manually searching through Drive folders, PDFs, and meeting notes to answer routine questions — a real bottleneck for field staff who needed timely answers, especially those with limited tech experience or unreliable internet access."
+              value="Safe Cities staff were losing real time manually searching through Drive folders, PDFs, and meeting notes to answer routine questions — a genuine bottleneck for field staff who needed timely answers, especially those with limited tech experience or unreliable internet access."
             />
           </div>
           <div className="flex items-center justify-center">
@@ -93,7 +93,7 @@ export default function ProjectWalkthrough() {
             <span className="section-label">💡 The Solution</span>
             <StaticField
               rows={5}
-              value="Elsie, a RAG-based AI assistant built into the existing app. Staff ask questions in plain English and get answers grounded in Safe Cities' own documents, with sources cited so answers can be trusted and verified rather than taken on faith."
+              value="Elsie, a RAG-based AI assistant built into the existing app. Staff ask questions in plain English and get answers grounded in Safe Cities' own documents, with sources cited so answers can be checked and trusted rather than taken on faith."
             />
           </div>
         </div>
@@ -192,10 +192,10 @@ export default function ProjectWalkthrough() {
 
         {/* Challenges & learnings */}
         <div className="grid grid-cols-2 gap-6 mb-10">
-          <Field label="Biggest technical challenge" value="Discovering mid-project that key Azure AI models weren't available in the South Africa region — we had to redesign the deployment across two regions and later fuse keyword + vector search (Reciprocal Rank Fusion) after finding the assistant missed answers that existed but ranked outside the top results by meaning alone." placeholder="" rows={5} />
-          <Field label="What you'd do differently" value="Migrate off the original Google Gemini + Render setup earlier — the cold-start warmup delays and black-box ranking cost real usability points in testing before we moved to Azure." placeholder="" rows={5} />
-          <Field label="Most proud of" value="That the assistant is literally named Elsie, after one of our own early user personas — and that fixing the retrieval (hybrid search) meant she could finally answer real staff questions like ones about worm-composting practices that vector search alone had missed." placeholder="" rows={4} />
-          <Field label="Impact after the program" value="Handed off with recorded instructional videos and documentation so Safe Cities staff could run the platform independently, with the AI service live on Azure (grant-funded, so no ongoing cost to the nonprofit) rather than dependent on our continued involvement." placeholder="" rows={4} />
+          <Field label="Biggest technical challenge" value="Discovering mid-project that key Azure AI models weren't available in the South Africa region meant redesigning the deployment across two regions with almost no notice and no clean playbook for it. Later, usability testing surfaced a second, subtler problem: the assistant was missing answers that existed in Safe Cities' documents but ranked outside the top results by semantic similarity alone. Fixing that meant learning and implementing Reciprocal Rank Fusion to combine keyword and vector search, which taught me that a working retrieval pipeline and a genuinely useful one are two different engineering problems." placeholder="" rows={5} />
+          <Field label="What you'd do differently" value="Migrate off the original Google Gemini + Render setup earlier. The cold-start warmup delays and black-box ranking behavior quietly cost us real usability points in testing, and in hindsight the signs were there weeks before we finally moved to Azure. The lesson: when infrastructure keeps fighting you, that's data, not bad luck — treat repeated friction as a signal to re-evaluate the stack, not a problem to keep working around." placeholder="" rows={5} />
+          <Field label="Most proud of" value="That the assistant is literally named Elsie, after one of our own early user personas — a small detail that kept the actual staff we were designing for in the room even after the persona exercise was long over. Fixing retrieval (hybrid search) wasn't just a technical win either: it meant Elsie could finally answer real staff questions, like ones about worm-composting practices, that vector search alone had quietly missed. Watching that gap close in testing is the moment the project stopped feeling like a demo and started feeling like a tool people could rely on." placeholder="" rows={4} />
+          <Field label="Impact after the program" value="Handed off with recorded instructional videos and full documentation so Safe Cities staff could run the platform independently — not dependent on us being reachable after we left. The AI service stays live on Azure under grant funding, so there's no ongoing cost to the nonprofit. That constraint shaped the whole handoff: building something that works without its builders in the room is a harder goal than building something that works in a demo, and it's the standard I'd hold myself to on any project now." placeholder="" rows={4} />
         </div>
       </div>
     </div>

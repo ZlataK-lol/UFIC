@@ -15,8 +15,8 @@ const WEEKS = [
     color: '#4a9ab5',
     time: 'About 8 hours — 4 on the kickoff presentation, 4 on environment setup.',
     contribution: 'Built the project overview, Persona 1, and one user story for the team\'s kickoff presentation, set up the existing project environment on my own machine, and helped write the team status report.',
-    reflection: 'Learned how to step into a project that was already underway rather than starting from scratch. Also learned about Cape Town\'s history — Apartheid and the history of slavery — which reframed how I saw the city and pushed me to learn from experience rather than assumption.',
-    lesson: 'Learn from the people and history around you, not just word of mouth.',
+    reflection: 'Learned how to step into a project that was already underway rather than starting from scratch — reading someone else\'s decisions instead of making my own from a blank page is its own skill, and week one was mostly building that muscle. Also learned about Cape Town\'s history — Apartheid and the history of slavery before it — early enough that it reframed how I saw the city from day one, and pushed me to learn from experience and listening rather than assumption for the rest of the program.',
+    lesson: 'Learn from the people and history around you — don\'t let secondhand impressions stand in for actually finding out.',
   },
   {
     num: 2,
@@ -25,8 +25,8 @@ const WEEKS = [
     color: '#86C5D8',
     time: 'Roughly 7–8 hours.',
     contribution: 'Built the AI chat frontend — new/save/delete chat controls and the sidebar — and connected the assistant\'s API key so it could read from Safe Cities\' Google Drive.',
-    reflection: 'Learned how to prompt-engineer for useful AI output, what goes into a real frontend build, and how to set guardrails so the assistant stays inside its intended scope.',
-    lesson: 'A good assistant needs boundaries as much as it needs capability.',
+    reflection: 'Learned how to prompt-engineer for genuinely useful AI output instead of just plausible-sounding output — those aren\'t the same thing, and the gap between them is where most of the real work lives. Also learned what actually goes into a production frontend build versus a prototype, and how to set guardrails so the assistant stayed inside its intended scope instead of confidently answering questions it had no business answering.',
+    lesson: 'A good assistant needs boundaries as much as it needs capability — knowing what not to answer is part of the design, not an afterthought.',
   },
   {
     num: 3,
@@ -35,7 +35,7 @@ const WEEKS = [
     color: '#CAE9F5',
     time: 'Roughly 10–11 hours.',
     contribution: 'Set up a Google Apps Script so documents save automatically from a labeled email into Drive, then picked a new color palette and reworked the frontend for a more modern feel based on client direction.',
-    reflection: 'Learned the importance of heavy planning before development — after redesigning the home screen several times, I learned to know exactly what I wanted built before I started building it.',
+    reflection: 'Learned the importance of heavy planning before development the hard way — after redesigning the home screen several times based on client direction that kept evolving, I learned to lock down exactly what I wanted built, and get sign-off on it, before writing the first line of a new screen.',
     lesson: 'Plan before you build, or you\'ll end up building it twice.',
   },
   {
@@ -45,7 +45,7 @@ const WEEKS = [
     color: '#4a9ab5',
     time: 'Roughly 10–11 hours.',
     contribution: 'Configured Microsoft Azure AI Foundry using a $2,000 nonprofit grant, evaluated AI models on cost, efficiency, and safety, and deployed models across two regions after discovering key models weren\'t available in South Africa.',
-    reflection: 'Learned how to problem-solve without reliable vendor support, and how to restructure a project around real-world regional constraints rather than what the documentation assumes.',
+    reflection: 'Learned how to problem-solve without reliable vendor support close at hand, and how to restructure a project around real-world regional constraints instead of what the documentation quietly assumes about where you\'re deploying from. Evaluating models on cost, efficiency, and safety against a fixed $2,000 grant also taught me to treat budget as a design constraint from the start, not an afterthought to optimize once something already works.',
     lesson: 'Resilience means redesigning around constraints, not waiting for the ideal setup.',
   },
   {
@@ -66,7 +66,7 @@ const WEEKS = [
     color: '#ADD8E6',
     time: 'About 9 hours — 7 on presentation prep, 2 speaking with the client.',
     contribution: 'Completed slides for the final presentations, tested with the client after usability testing to measure how much more efficient the app made their process, and walked them through specific features in detail.',
-    reflection: 'Learned a lot about myself as a presenter — noticeably less stressed before big presentations than at the start of the trip. Also learned to ask very specific questions of a non-technical client, translating their concerns into concrete feature requirements.',
+    reflection: 'Learned a lot about myself as a presenter in this final week — noticeably less stressed walking into a big presentation than I\'d been back in week one, and able to actually enjoy the client conversation instead of just surviving it. Also learned to ask very specific questions of a non-technical client, translating vague concerns like "it feels slow" or "this is confusing" into concrete, buildable feature requirements — a translation skill that took the full six weeks to sharpen.',
     lesson: 'Confidence in front of a room is built one presentation at a time — this was my last week in Cape Town, and it felt like the right note to end on.',
   },
 ]
@@ -191,14 +191,14 @@ export default function WeeklyLessons() {
               <label className="section-label">The arc of my growth</label>
               <StaticField
                 rows={5}
-                value="I arrived already having interviewed the client remotely, but the six weeks on the ground were where the work — and the growth — actually happened. I went from setting up someone else's project environment to redesigning the AI assistant's cloud infrastructure around constraints no one had planned for, and I ended those six weeks presenting confidently to the client on July 12th, in a way that would have felt out of reach in week one."
+                value="I arrived already having interviewed the client remotely, but the six weeks on the ground were where the work — and the growth — actually happened. I went from setting up someone else's project environment in week one, to redesigning the AI assistant's cloud infrastructure around constraints nobody had planned for in week four, to presenting confidently to the client on July 12th in a way that would have felt completely out of reach back in week one. Looking at it week by week rather than all at once, the growth doesn't look like a single turning point — it looks like six small, deliberate corrections that added up."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Lessons I'll carry into my career</label>
               <StaticField
                 rows={5}
-                value="Plan before you build, especially when the plan will save you from redoing the same screen three times. Real infrastructure is messy — resilience means redesigning around constraints, not waiting for ideal conditions. And presentation skills are built the same way software is: iteration, not talent."
+                value="Plan before you build, especially when a day of planning would save you from redoing the same screen three times. Real infrastructure is messy — resilience means redesigning around the constraints you're actually given, not waiting for ideal conditions that may never show up. Presentation skills are built the same way software is: through iteration, not talent, and the only way to get comfortable in front of a client is to keep showing up in front of one. And technical achievement means little in isolation — the work only matters as much as the community it actually serves."
               />
             </div>
           </div>

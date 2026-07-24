@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
           <Field
             label="Personal Statement"
-            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to building technology that solves real problems for people who need it most. Building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening — and that resilience means designing around the constraints you're actually given, not the ones you wish you had."
+            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to technology that solves problems for the people who need it most rather than the people it's easiest to build for. Ten weeks building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening before writing a line of code, and that real resilience isn't finding the ideal setup — it's redesigning around the constraints you're actually handed, region by region if you have to."
             placeholder="A concise statement (2–3 sentences) about your academic identity and aspirations, informed by your study abroad experience."
             rows={4}
           />
@@ -122,7 +122,7 @@ export default function Resume() {
               </div>
               <Field
                 label="Courses taken abroad"
-                value="This was a project-based practicum rather than enrolled coursework — my abroad time was spent as a Frontend Developer & AI Chatbot Design Intern for Safe Cities Permaculture (see Work Experience below), not in a classroom."
+                value="This was a project-based practicum rather than enrolled coursework. My time abroad was spent as a Frontend Developer & AI Chatbot Design Intern for Safe Cities Permaculture (see Work Experience below) — learning by shipping for a real client instead of sitting in a classroom."
                 placeholder="List the courses you enrolled in, their titles, and a brief description of what you studied in each."
                 rows={4}
               />
@@ -146,7 +146,7 @@ export default function Resume() {
           />
           <Field
             label="Key responsibilities & accomplishments"
-            value="At Safe Cities: developed frontend features and UI for a community-focused mobile application, implemented an AI-powered chatbot integrating the Anthropic Claude API, built responsive interfaces for auth, scheduling, task management, reporting, and marketplace features, and participated in system testing and iterative improvement throughout the build. At Eagle Harbor Aquatics: 350+ hours managing and training new lifeguards in safety protocols, holding Red Cross Lifeguarding/CPR/AED and Basic Swim Instructor certifications."
+            value="At Safe Cities: built frontend features and UI for a community-facing mobile application, implemented an AI-powered chatbot integrating the Anthropic Claude API, shipped responsive interfaces for auth, scheduling, task management, reporting, and the marketplace, and ran system testing and iteration throughout the build cycle. At Eagle Harbor Aquatics: 350+ hours managing and training new lifeguards in safety protocols, holding Red Cross Lifeguarding/CPR/AED and Basic Swim Instructor certifications — experience in calm, high-stakes communication that carried over directly into presenting to a nonprofit client."
             placeholder="Describe your roles and what you achieved. Include any positions held during or connected to your abroad experience."
             rows={5}
           />
@@ -169,7 +169,7 @@ export default function Resume() {
           />
           <Field
             label="Impact & reflections"
-            value="As Outreach Director for WiCSE, I coordinate outreach initiatives and hackathons to grow participation in CS/CE — including recruiting mentors and judges and leading workshops, work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. These activities, alongside my time abroad, sharpened the same skill: building for people whose needs are different from my own default assumptions."
+            value="As Outreach Director for WiCSE, I coordinate outreach initiatives and hackathons to grow participation in CS/CE — recruiting mentors and judges and leading workshops, work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. Between WiCSE, WingHacks, and Cape Town, I kept practicing the same skill from three different angles: building for people whose needs, context, and assumptions aren't my own — and learning to ask better questions before assuming I already understood them."
             placeholder="What did you contribute? How did these activities shape your abroad experience or your professional outlook?"
             rows={4}
           />

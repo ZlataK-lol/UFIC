@@ -89,13 +89,13 @@ export default function TripOverview() {
             <Field
               label="Program name & organization"
               placeholder="e.g. EDU Africa Summer Research Program — describe the program, who runs it, and what its mission is."
-              value="UF International Scholars Program, a University of Florida study abroad program run in partnership with EDU Africa, pairing CS/CE students with a real nonprofit client for a semester-long software build."
+              value="UF International Scholars Program, a University of Florida study abroad program run in partnership with EDU Africa that pairs CS/CE students with a real nonprofit client for a semester-long software build — from client discovery through final handoff."
               rows={4}
             />
             <Field
               label="Where we went"
               placeholder="Cities, regions, and sites visited across South Africa. Include Cape Town, any townships, universities, or field sites."
-              value="Based in Cape Town for the full program, with our project site at Safe Cities Permaculture in Elsies River, Western Cape. Also visited Chapman's Peak Drive and other sites around the Cape Peninsula as a group."
+              value="Based in Cape Town for the full program, with our project site at Safe Cities Permaculture in Elsies River, Western Cape. As a group, we also explored Chapman's Peak Drive and other sites across the Cape Peninsula."
               rows={4}
             />
             <Field
@@ -131,19 +131,19 @@ export default function TripOverview() {
             <Field
               label="Problem being solved"
               placeholder="What real-world problem in South Africa did this project address?"
-              value="Safe Cities staff were spending significant time manually searching Drive folders, PDFs, and meeting notes for routine answers — a bottleneck for field staff who needed timely information."
+              value="Safe Cities staff were losing real time hunting through Drive folders, PDFs, and meeting notes for routine answers — a bottleneck for field staff who needed timely information and often didn't have it."
               rows={1}
             />
             <Field
               label="Project description"
               placeholder="Describe the application at a high level — what does it do, who uses it, and why does it matter to the South African context?"
-              value="AFC Estate is a farm-management web app for Safe Cities Permaculture with auth, a document library, task/schedule management, a marketplace, and messaging. Its centerpiece is Elsie, a RAG-based AI assistant that answers natural-language staff questions grounded in the organization's own Google Drive documents and citing its sources — so knowledge that used to live in scattered folders is now a conversation away."
+              value="AFC Estate is a farm-management web app for Safe Cities Permaculture, with auth, a document library, task and schedule management, a marketplace, and messaging. Its centerpiece is Elsie, a RAG-based AI assistant that answers natural-language staff questions grounded in the organization's own Google Drive documents and cites its sources — so knowledge that used to live in scattered folders is now a conversation away."
               rows={5}
             />
             <Field
               label="Our team's role"
               placeholder="What was your team specifically responsible for? How did you contribute to the larger project ecosystem?"
-              value="As Penguin Intelligence (Zlata Kovrigina, Adam Makled, Anthony Vargas), we owned the entire build end-to-end: client discovery and interviews, frontend and AI-assistant UX, backend/API work, cloud infrastructure (migrating the AI service from Google to a Microsoft Azure grant), and usability testing with the client and peers before handoff."
+              value="As Penguin Intelligence (Zlata Kovrigina, Adam Makled, Anthony Vargas), we owned the build end-to-end: client discovery and interviews, frontend and AI-assistant UX, backend and API work, cloud infrastructure (migrating the AI service from Google to a Microsoft Azure grant), and usability testing with the client and peers before handoff."
               rows={5}
             />
             <Field
