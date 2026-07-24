@@ -9,45 +9,35 @@ type Photo = {
   caption: string
   category: string
   filename: string
-  preview: string | null
 }
 
 function buildSlots(): Photo[] {
   return [
-    { id: '1', label: 'Table Mountain / Cape Point', caption: 'Describe this view...', category: 'Landscapes', filename: 'table-mountain.jpg', preview: null },
-    { id: '2', label: 'Chapman\'s Peak Drive', caption: 'Describe this view...', category: 'Landscapes', filename: 'chapmans-peak.jpg', preview: null },
-    { id: '3', label: 'Team at Safe Cities Farm', caption: 'Describe this moment...', category: 'Team', filename: 'team-farm.jpg', preview: null },
-    { id: '4', label: 'Group program outing', caption: 'Describe this moment...', category: 'Team', filename: 'group-outing.jpg', preview: null },
-    { id: '5', label: 'Client interview / kickoff', caption: 'Describe what you saw...', category: 'Project', filename: 'client-meeting.jpg', preview: null },
-    { id: '6', label: 'Final client presentation', caption: 'Describe this experience...', category: 'Project', filename: 'client-presentation.jpg', preview: null },
-    { id: '7', label: 'Elsie in action', caption: 'Describe the demo...', category: 'Project', filename: 'elsie-demo.jpg', preview: null },
-    { id: '8', label: 'Coding session', caption: 'Describe this session...', category: 'Project', filename: 'coding-session.jpg', preview: null },
-    { id: '9', label: 'Braai / local food', caption: 'Describe this meal...', category: 'Food', filename: 'braai.jpg', preview: null },
-    { id: '10', label: 'Cape Malay cuisine', caption: 'Describe the taste...', category: 'Food', filename: 'cape-malay-food.jpg', preview: null },
-    { id: '11', label: 'Bo-Kaap houses', caption: 'Describe this place...', category: 'Architecture', filename: 'bo-kaap.jpg', preview: null },
-    { id: '12', label: 'Safe Cities farm site', caption: 'Describe this space...', category: 'Architecture', filename: 'farm-site.jpg', preview: null },
-    { id: '13', label: 'Sunrise / sunset', caption: 'Describe this moment...', category: 'Landscapes', filename: 'sunset.jpg', preview: null },
-    { id: '14', label: 'Elsies River community', caption: 'Describe what you saw...', category: 'Culture', filename: 'elsies-river.jpg', preview: null },
-    { id: '15', label: 'Favorite team moment', caption: 'Why is this your favorite?', category: 'Team', filename: 'favorite-team-moment.jpg', preview: null },
-    { id: '16', label: 'One more memory', caption: 'Describe this memory...', category: 'All', filename: 'one-more-memory.jpg', preview: null },
+    { id: '1', label: 'Table Mountain / Cape Point', caption: 'Describe this view...', category: 'Landscapes', filename: 'table-mountain.jpg' },
+    { id: '2', label: 'Chapman\'s Peak Drive', caption: 'Describe this view...', category: 'Landscapes', filename: 'chapmans-peak.jpg' },
+    { id: '3', label: 'Team at Safe Cities Farm', caption: 'Describe this moment...', category: 'Team', filename: 'team-farm.jpg' },
+    { id: '4', label: 'Group program outing', caption: 'Describe this moment...', category: 'Team', filename: 'group-outing.jpg' },
+    { id: '5', label: 'Client interview / kickoff', caption: 'Describe what you saw...', category: 'Project', filename: 'client-meeting.jpg' },
+    { id: '6', label: 'Final client presentation', caption: 'Describe this experience...', category: 'Project', filename: 'client-presentation.jpg' },
+    { id: '7', label: 'Elsie in action', caption: 'Describe the demo...', category: 'Project', filename: 'elsie-demo.jpg' },
+    { id: '8', label: 'Coding session', caption: 'Describe this session...', category: 'Project', filename: 'coding-session.jpg' },
+    { id: '9', label: 'Braai / local food', caption: 'Describe this meal...', category: 'Food', filename: 'braai.jpg' },
+    { id: '10', label: 'Cape Malay cuisine', caption: 'Describe the taste...', category: 'Food', filename: 'cape-malay-food.jpg' },
+    { id: '11', label: 'Bo-Kaap houses', caption: 'Describe this place...', category: 'Architecture', filename: 'bo-kaap.jpg' },
+    { id: '12', label: 'Safe Cities farm site', caption: 'Describe this space...', category: 'Architecture', filename: 'farm-site.jpg' },
+    { id: '13', label: 'Sunrise / sunset', caption: 'Describe this moment...', category: 'Landscapes', filename: 'sunset.jpg' },
+    { id: '14', label: 'Elsies River community', caption: 'Describe what you saw...', category: 'Culture', filename: 'elsies-river.jpg' },
+    { id: '15', label: 'Favorite team moment', caption: 'Why is this your favorite?', category: 'Team', filename: 'favorite-team-moment.jpg' },
+    { id: '16', label: 'One more memory', caption: 'Describe this memory...', category: 'All', filename: 'one-more-memory.jpg' },
   ]
 }
 
-function GalleryCard({ photo, onUpload, onCaptionChange }: {
-  photo: Photo
-  onUpload: (id: string, url: string) => void
-  onCaptionChange: (id: string, val: string) => void
-}) {
+function GalleryCard({ photo }: { photo: Photo }) {
   const [captionOpen, setCaptionOpen] = useState(false)
   const [autoFailed, setAutoFailed] = useState(false)
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) onUpload(photo.id, URL.createObjectURL(file))
-  }
-
   const autoSrc = `/photos/gallery/${photo.filename}`
-  const shown = photo.preview || (!autoFailed ? autoSrc : null)
+  const shown = !autoFailed ? autoSrc : null
 
   return (
     <div
@@ -68,7 +58,6 @@ function GalleryCard({ photo, onUpload, onCaptionChange }: {
             <span className="text-xs">{photo.label}</span>
           </>
         )}
-        <input type="file" accept="image/*" onChange={handleFile} title="Upload photo" />
 
         {/* Category badge */}
         <span
@@ -87,16 +76,15 @@ function GalleryCard({ photo, onUpload, onCaptionChange }: {
           style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--muted-foreground)' }}
         >
           <span style={{ color: 'var(--sa-gold, #c8973a)' }}>✦</span>
-          {captionOpen ? 'Hide caption' : 'Add caption'}
+          {captionOpen ? 'Hide caption' : 'Show caption'}
         </button>
         {captionOpen && (
           <textarea
+            readOnly
             className="text-field"
             rows={2}
             style={{ fontSize: '0.8125rem' }}
             defaultValue={photo.caption}
-            placeholder="Add a caption for this photo..."
-            onChange={(e) => onCaptionChange(photo.id, e.target.value)}
           />
         )}
       </div>
@@ -104,10 +92,10 @@ function GalleryCard({ photo, onUpload, onCaptionChange }: {
   )
 }
 
-function FeaturedPhoto({ photo, onUpload }: { photo: Photo; onUpload: (id: string, url: string) => void }) {
+function FeaturedPhoto({ photo }: { photo: Photo }) {
   const [autoFailed, setAutoFailed] = useState(false)
   const autoSrc = `/photos/gallery/${photo.filename}`
-  const shown = photo.preview || (!autoFailed ? autoSrc : null)
+  const shown = !autoFailed ? autoSrc : null
   return (
     <div
       className="photo-slot rounded-lg"
@@ -123,31 +111,17 @@ function FeaturedPhoto({ photo, onUpload }: { photo: Photo; onUpload: (id: strin
       ) : (
         <>
           <Protea size={60} opacity={0.3} />
-          <span className="text-sm">Upload your most iconic South Africa photo</span>
-          <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>This will be your gallery hero image</span>
+          <span className="text-sm">Your most iconic South Africa photo</span>
+          <span className="text-xs" style={{ color: 'var(--muted-foreground)' }}>This is the gallery hero image</span>
         </>
       )}
-      <input type="file" accept="image/*" onChange={(e) => { const f = e.target.files?.[0]; if (f) onUpload(photo.id, URL.createObjectURL(f)) }} title="Upload featured photo" />
     </div>
   )
 }
 
 export default function PhotoGallery() {
-  const [photos, setPhotos] = useState<Photo[]>(buildSlots())
+  const [photos] = useState<Photo[]>(buildSlots())
   const [activeCategory, setActiveCategory] = useState('All')
-
-  const handleUpload = (id: string, url: string) => {
-    setPhotos((prev) => prev.map((p) => p.id === id ? { ...p, preview: url } : p))
-  }
-
-  const handleCaption = (id: string, val: string) => {
-    setPhotos((prev) => prev.map((p) => p.id === id ? { ...p, caption: val } : p))
-  }
-
-  const addSlot = () => {
-    const id = String(Date.now())
-    setPhotos((prev) => [...prev, { id, label: 'New photo', caption: '', category: 'All', filename: `custom-${id}.jpg`, preview: null }])
-  }
 
   const filtered = activeCategory === 'All' ? photos : photos.filter((p) => p.category === activeCategory)
 
@@ -179,8 +153,9 @@ export default function PhotoGallery() {
         {/* Featured / hero photo */}
         <div className="mb-10">
           <span className="section-label mb-3 block">Featured Photo</span>
-          <FeaturedPhoto photo={photos[0]} onUpload={handleUpload} />
+          <FeaturedPhoto photo={photos[0]} />
           <textarea
+            readOnly
             className="text-field mt-3"
             rows={2}
             placeholder="Caption for your featured photo — what made this moment the one?"
@@ -205,24 +180,12 @@ export default function PhotoGallery() {
               {cat}
             </button>
           ))}
-          <button
-            onClick={addSlot}
-            className="ml-auto text-xs px-3 py-1.5 rounded"
-            style={{ background: 'var(--secondary)', border: '1px dashed var(--border)', color: 'var(--muted-foreground)', cursor: 'pointer' }}
-          >
-            + Add photo slot
-          </button>
         </div>
 
         {/* Grid */}
         <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))' }}>
           {filtered.map((photo) => (
-            <GalleryCard
-              key={photo.id}
-              photo={photo}
-              onUpload={handleUpload}
-              onCaptionChange={handleCaption}
-            />
+            <GalleryCard key={photo.id} photo={photo} />
           ))}
         </div>
 
@@ -235,11 +198,11 @@ export default function PhotoGallery() {
           <div className="grid grid-cols-2 gap-5">
             <div className="flex flex-col gap-1.5">
               <label className="section-label">The photo that captures it all</label>
-              <textarea className="text-field" rows={4} placeholder="Which photo best encapsulates your entire experience, and why? What story does it tell without words?" />
+              <textarea readOnly className="text-field" rows={4} placeholder="Which photo best encapsulates your entire experience, and why? What story does it tell without words?" />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">What the camera couldn't capture</label>
-              <textarea className="text-field" rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice — something that lives only in your memory." />
+              <textarea readOnly className="text-field" rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice — something that lives only in your memory." />
             </div>
           </div>
         </div>

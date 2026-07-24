@@ -143,15 +143,15 @@ export default function WeeklyLessons() {
                     <div className="grid grid-cols-2 gap-5">
                       <div className="flex flex-col gap-1.5">
                         <label className="section-label">Time dedicated</label>
-                        <textarea className="text-field" rows={2} defaultValue={week.time} />
+                        <textarea readOnly className="text-field" rows={2} defaultValue={week.time} />
                       </div>
                       <div className="flex flex-col gap-1.5">
                         <label className="section-label">Contribution to the project</label>
-                        <textarea className="text-field" rows={4} defaultValue={week.contribution} />
+                        <textarea readOnly className="text-field" rows={4} defaultValue={week.contribution} />
                       </div>
                       <div className="flex flex-col gap-1.5" style={{ gridColumn: '1 / -1' }}>
                         <label className="section-label">Reflection & lessons learned</label>
-                        <textarea className="text-field" rows={4} defaultValue={week.reflection} />
+                        <textarea readOnly className="text-field" rows={4} defaultValue={week.reflection} />
                       </div>
                     </div>
 
@@ -164,6 +164,7 @@ export default function WeeklyLessons() {
                             <span className="section-label">✦ The Lesson of Week {week.num}</span>
                           </div>
                           <textarea
+                            readOnly
                             className="text-field"
                             rows={2}
                             style={{ fontSize: '1rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif' }}
@@ -190,6 +191,7 @@ export default function WeeklyLessons() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">The arc of my growth</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={5}
                 defaultValue="I arrived already having interviewed the client remotely, but the six weeks on the ground were where the work — and the growth — actually happened. I went from setting up someone else's project environment to redesigning the AI assistant's cloud infrastructure around constraints no one had planned for, and I ended those six weeks presenting confidently to the client on July 12th, in a way that would have felt out of reach in week one."
@@ -198,6 +200,7 @@ export default function WeeklyLessons() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Lessons I'll carry into my career</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={5}
                 defaultValue="Plan before you build, especially when the plan will save you from redoing the same screen three times. Real infrastructure is messy — resilience means redesigning around constraints, not waiting for ideal conditions. And presentation skills are built the same way software is: iteration, not talent."

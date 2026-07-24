@@ -153,21 +153,8 @@ body {
   font-size: 0.8125rem;
   font-style: italic;
   transition: background 0.15s, border-color 0.15s;
-  cursor: pointer;
   overflow: hidden;
   position: relative;
-}
-
-.photo-slot:hover {
-  background: var(--muted);
-  border-color: var(--accent);
-}
-
-.photo-slot input[type="file"] {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: pointer;
 }
 
 /* Section label */

@@ -5,7 +5,7 @@ function Field({ label, placeholder, rows = 3 }: { label: string; placeholder: s
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} />
     </div>
   )
 }
@@ -52,7 +52,7 @@ export default function AboutMe() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
                   <label className="section-label">{label}</label>
-                  <input type="text" className="text-field" defaultValue={value} />
+                  <input readOnly type="text" className="text-field" defaultValue={value} />
                 </div>
               ))}
             </div>

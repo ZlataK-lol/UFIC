@@ -5,7 +5,7 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
     </div>
   )
 }
@@ -70,6 +70,7 @@ export default function TripOverview() {
                 }}
               >
                 <input
+                  readOnly
                   type="text"
                   defaultValue={value}
                   className="w-full text-center bg-transparent border-none outline-none text-2xl font-bold"
@@ -190,7 +191,7 @@ export default function TripOverview() {
                       <span className="section-label">{week}</span>
                       <span style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '0.875rem' }}>{label}</span>
                     </div>
-                    <textarea className="text-field" rows={2} defaultValue={text} />
+                    <textarea readOnly className="text-field" rows={2} defaultValue={text} />
                   </div>
                 </div>
               ))}

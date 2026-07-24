@@ -4,7 +4,7 @@ function InputField({ label, value, placeholder, wide = false }: { label: string
   return (
     <div className={`flex flex-col gap-1.5 ${wide ? 'col-span-2' : ''}`}>
       <label className="section-label">{label}</label>
-      <input type="text" className="text-field" placeholder={placeholder} defaultValue={value} />
+      <input readOnly type="text" className="text-field" placeholder={placeholder} defaultValue={value} />
     </div>
   )
 }
@@ -13,7 +13,7 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
     </div>
   )
 }
@@ -46,7 +46,7 @@ function RepeatEntry({ fields, defaults = [] }: { fields: Array<{ label: string;
           {fields.map((f) => (
             <div key={f.label} className="flex flex-col gap-1">
               <label className="section-label">{f.label} {i + 1}</label>
-              <input type="text" className="text-field" placeholder={f.placeholder} defaultValue={defaults[i]?.[f.label]} />
+              <input readOnly type="text" className="text-field" placeholder={f.placeholder} defaultValue={defaults[i]?.[f.label]} />
             </div>
           ))}
         </div>

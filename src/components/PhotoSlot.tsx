@@ -1,13 +1,11 @@
 import { useState } from 'react'
 
 /**
- * A photo slot that:
- * 1. Tries to auto-load an image from `src` (e.g. "/photos/team-farm.jpg") if provided.
- * 2. Falls back to the dashed placeholder + manual upload button if that file doesn't exist.
- * 3. A manual upload always overrides the auto-loaded image for that session.
+ * A static photo slot that shows the image at `src` (e.g. "/photos/team-farm.jpg").
+ * Falls back to the dashed placeholder if that file doesn't exist.
  *
- * To add your own photo: drop a file with the matching name into `public/photos`
- * (or `public/screenshots` for app screens) — no code changes needed.
+ * To add or change a photo: drop a file with the matching name into `public/photos`
+ * (or `public/screenshots` for app screens) and redeploy — no upload happens in the browser.
  * See PHOTO_GUIDE.md in the project root for the full list of expected filenames.
  */
 export function PhotoSlot({
@@ -21,15 +19,9 @@ export function PhotoSlot({
   height?: number
   tall?: boolean
 }) {
-  const [preview, setPreview] = useState<string | null>(null)
   const [autoFailed, setAutoFailed] = useState(false)
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) setPreview(URL.createObjectURL(file))
-  }
-
-  const shown = preview || (src && !autoFailed ? src : null)
+  const shown = src && !autoFailed ? src : null
 
   return (
     <div className="photo-slot" style={tall ? { aspectRatio: '3 / 4' } : { height }}>
@@ -50,7 +42,6 @@ export function PhotoSlot({
           <span>{label}</span>
         </>
       )}
-      <input type="file" accept="image/*" onChange={handleFile} title="Upload photo" />
     </div>
   )
 }

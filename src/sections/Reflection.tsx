@@ -5,7 +5,7 @@ function Field({ label, value, placeholder, rows = 4 }: { label: string; value?:
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
     </div>
   )
 }
@@ -54,6 +54,7 @@ export default function Reflection() {
         <div className="flex flex-col gap-4">
           <PhotoSlot label="Your most meaningful photo from the whole trip" src="/photos/most-meaningful.jpg" height={320} />
           <textarea
+            readOnly
             className="text-field"
             rows={2}
             placeholder="Caption: why this photo above all others?"
@@ -179,6 +180,7 @@ export default function Reflection() {
           A quote, poem, or passage that captures your experience — or simply your own final words.
         </p>
         <textarea
+          readOnly
           className="text-field text-center"
           rows={5}
           style={{ fontSize: '1.0625rem', fontStyle: 'italic', fontFamily: '"Playfair Display", Georgia, serif' }}

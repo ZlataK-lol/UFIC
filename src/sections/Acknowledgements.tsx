@@ -109,6 +109,7 @@ export default function Acknowledgements() {
                 <div className="flex-1">
                   {person.editable ? (
                     <input
+                      readOnly
                       type="text"
                       defaultValue={person.name}
                       className="bg-transparent border-none outline-none w-full"
@@ -122,6 +123,7 @@ export default function Acknowledgements() {
                   )}
                   {person.editable ? (
                     <input
+                      readOnly
                       type="text"
                       defaultValue={person.role}
                       className="bg-transparent border-none outline-none w-full mt-0.5"
@@ -139,6 +141,7 @@ export default function Acknowledgements() {
               <div className="px-6 py-5">
                 <label className="section-label mb-2 block">Personal message of thanks</label>
                 <textarea
+                  readOnly
                   className="text-field"
                   rows={4}
                   defaultValue={person.message}
@@ -158,6 +161,7 @@ export default function Acknowledgements() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Teammates</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={5}
                 defaultValue="Adam Makled (Senior, Comp Sci — Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng — Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
@@ -166,6 +170,7 @@ export default function Acknowledgements() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Local community & South African hosts</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={5}
                 defaultValue="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet — that honesty made the platform better."
@@ -174,6 +179,7 @@ export default function Acknowledgements() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Family & friends back home</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={4}
                 placeholder="Who supported you from afar — who did you call when you were overwhelmed or excited? What did their support mean while you were abroad?"
@@ -182,6 +188,7 @@ export default function Acknowledgements() {
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Others to thank</label>
               <textarea
+                readOnly
                 className="text-field"
                 rows={4}
                 placeholder="Anyone else who played a role — a professor who inspired you, a scholarship that funded you, a book that prepared you, a stranger who showed you kindness."
@@ -224,6 +231,7 @@ export default function Acknowledgements() {
               <DiamondRow count={9} />
               <div className="mt-8">
                 <textarea
+                  readOnly
                   className="text-field text-center"
                   rows={4}
                   style={{

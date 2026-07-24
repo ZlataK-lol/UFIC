@@ -6,7 +6,7 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} defaultValue={value} />
     </div>
   )
 }
@@ -56,15 +56,15 @@ export default function ProjectWalkthrough() {
           <div className="grid grid-cols-3 gap-5 relative z-10">
             <div className="flex flex-col gap-1.5">
               <label className="section-label">App Name</label>
-              <input type="text" className="text-field" defaultValue="AFC Estate (featuring Elsie, the AI Assistant)" />
+              <input readOnly type="text" className="text-field" defaultValue="AFC Estate (featuring Elsie, the AI Assistant)" />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Type</label>
-              <input type="text" className="text-field" defaultValue="Web app (originally React Native + Expo, rebuilt in HTML/CSS/JS)" />
+              <input readOnly type="text" className="text-field" defaultValue="Web app (originally React Native + Expo, rebuilt in HTML/CSS/JS)" />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Primary Users</label>
-              <input type="text" className="text-field" defaultValue="Safe Cities Permaculture program staff and field workers in Elsies River, Cape Town" />
+              <input readOnly type="text" className="text-field" defaultValue="Safe Cities Permaculture program staff and field workers in Elsies River, Cape Town" />
             </div>
           </div>
         </div>
@@ -74,6 +74,7 @@ export default function ProjectWalkthrough() {
           <div className="sa-card flex flex-col gap-3">
             <span className="section-label">🔍 The Problem</span>
             <textarea
+              readOnly
               className="text-field"
               rows={5}
               defaultValue="Safe Cities staff were spending significant time manually searching through Drive folders, PDFs, and meeting notes to answer routine questions — a real bottleneck for field staff who needed timely answers, especially those with limited tech experience or unreliable internet access."
@@ -92,6 +93,7 @@ export default function ProjectWalkthrough() {
           >
             <span className="section-label">💡 The Solution</span>
             <textarea
+              readOnly
               className="text-field"
               rows={5}
               defaultValue="Elsie, a RAG-based AI assistant built into the existing app. Staff ask questions in plain English and get answers grounded in Safe Cities' own documents, with sources cited so answers can be trusted and verified rather than taken on faith."
@@ -183,7 +185,7 @@ export default function ProjectWalkthrough() {
             >
               <span style={{ fontSize: '2.5rem' }}>▶</span>
               <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>Paste a YouTube / Vimeo link or describe your demo</span>
-              <input type="text" className="text-field" style={{ maxWidth: '400px' }} defaultValue="https://afc-estate.vercel.app" />
+              <input readOnly type="text" className="text-field" style={{ maxWidth: '400px' }} defaultValue="https://afc-estate.vercel.app" />
             </div>
             <div className="mt-4">
               <Field label="Demo narration / script" placeholder="Describe what happens in your demo video, or walk through the demo as if narrating it to a stakeholder." rows={4} />

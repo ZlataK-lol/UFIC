@@ -5,7 +5,7 @@ function Field({ label, placeholder, rows = 3 }: { label: string; placeholder: s
   return (
     <div className="flex flex-col gap-1.5">
       <label className="section-label">{label}</label>
-      <textarea className="text-field" rows={rows} placeholder={placeholder} />
+      <textarea readOnly className="text-field" rows={rows} placeholder={placeholder} />
     </div>
   )
 }
@@ -26,19 +26,21 @@ function Postcard({ number }: { number: number }) {
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-1">
           <label className="section-label">Location</label>
-          <input type="text" className="text-field" placeholder="City / place name" />
+          <input readOnly type="text" className="text-field" placeholder="City / place name" />
         </div>
         <div className="flex flex-col gap-1">
           <label className="section-label">Date</label>
-          <input type="text" className="text-field" placeholder="Month, Year" />
+          <input readOnly type="text" className="text-field" placeholder="Month, Year" />
         </div>
       </div>
       <textarea
+        readOnly
         className="text-field"
         rows={4}
         placeholder="Describe this memory. What happened, who were you with, why does it stand out? Write as if sending a postcard to your past self."
       />
       <textarea
+        readOnly
         className="text-field"
         rows={2}
         placeholder="One sentence that captures the feeling of this moment…"
