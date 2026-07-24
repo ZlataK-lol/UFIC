@@ -13,12 +13,54 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
 }
 
 const SCREENS = [
-  { id: 'home', label: 'Home Screen', file: 'home', text: 'The landing dashboard staff see after logging in: quick links to tasks, documents, the marketplace, and Elsie.' },
-  { id: 'auth', label: 'Login / Auth', file: 'auth', text: 'Simple username/password auth with role-based access, so admins and workers see different capabilities.' },
-  { id: 'ai-assistant', label: 'Elsie: AI Assistant', file: 'ai-assistant', text: 'The chat interface for Elsie. Answers are grounded in Safe Cities\' own Drive documents, printed word-by-word, with sources cited and full conversation history saved and searchable.' },
-  { id: 'tasks', label: 'Task Management', file: 'task-management', text: 'Admins assign tasks to specific workers; each worker only sees their own. Tasks can be reopened, marked overdue, or completed, with notes and images attached.' },
-  { id: 'documents', label: 'Document Library', file: 'document-library', text: 'A single synced system between the website and Safe Cities\' Google Drive: add a file to either one and it appears in both, with in-browser viewing for PDFs and Word docs.' },
-  { id: 'marketplace', label: 'Marketplace', file: 'marketplace', text: 'Community listings with photos, price ranges, and in-app messaging for buying, selling, and trading within the Safe Cities community.' },
+  {
+    id: 'home',
+    label: 'Home Screen',
+    file: 'home',
+    text: 'The public landing page for Safe Cities: a hero banner introducing the Elsies River permaculture program, a "Who We Are" section, and six programme cards covering skills training, permaculture, youth leadership, wellness, and media.',
+    journey: 'This is the page anyone lands on first, logged in or not. Scroll past the hero banner to read who Safe Cities is and what each of the six programmes actually covers, then use "Explore our programmes" or "Visit the marketplace" to jump straight into the site instead of hunting through the nav bar.',
+    technical: 'Built as a static marketing-style page that shares the same nav shell as the rest of the app. The six programme cards are just data mapped into one card component, so adding a seventh programme later means adding one object to a list, not touching the layout.',
+  },
+  {
+    id: 'auth',
+    label: 'Login / Auth',
+    file: 'auth',
+    text: 'A username/password login gate in front of the app, with a password reset link and an option to create a new account for staff who don\'t have one yet.',
+    journey: 'Type in your username and password (there\'s a Show toggle on the password field so you can check it before submitting) and hit Log in. Once you\'re in, your account details live under Profile in the top nav, where you can update your username, email, or password without logging back out first.',
+    technical: 'Plain form-based auth, no third-party login. Once you\'re authenticated, that same account object drives the "Hi, [name]" greeting and Log out button that follow you across every other screen.',
+  },
+  {
+    id: 'ai-assistant',
+    label: 'Elsie: AI Assistant',
+    file: 'ai-assistant',
+    text: 'Elsie\'s chat interface: ask a question in plain English and get an answer pulled from Safe Cities\' actual uploaded documents, with the source file cited underneath so you can go check it yourself.',
+    journey: 'Type a question the way you\'d text a person, like "tell me about worms" or "what animals are found on the farm." Elsie answers in a few seconds and tags which document she pulled it from at the bottom. Past conversations sit in the sidebar under Recents so you can pick one back up later, you can star the useful ones under Favorites, start fresh with + New chat, or check "Include my tasks" if you want her factoring your assigned tasks into the answer.',
+    technical: 'The refusal behavior is as deliberate as the correct answers: when Elsie doesn\'t have a document that answers something, like a task-assignment question with no matching source, she says so directly and lists what she does have on file instead of guessing.',
+  },
+  {
+    id: 'tasks',
+    label: 'Task Management',
+    file: 'task-management',
+    text: 'The farm\'s task list: every task shows who it\'s assigned to, when it\'s due, and whether it\'s open, completed, or overdue, and admins can filter by status or by user.',
+    journey: 'Click + New task, name it, set a due date and time, assign it to yourself or someone else, and add a note if there\'s context worth leaving, like why something\'s running late. Once it\'s live, anyone can Reschedule, Edit, mark it Complete, or Delete it right from the list; completed tasks move to their own tab, where they can be Reopened if something needs redoing.',
+    technical: 'Open, Completed, and Overdue are all just different filtered views over the same task data, not separate pages, so editing a task in one place updates it everywhere it shows up.',
+  },
+  {
+    id: 'documents',
+    label: 'Document Library',
+    file: 'document-library',
+    text: 'The shared document library, organized into folders like Animals, Composting and Worms, and Plants, where staff upload the PDFs and Word docs that Elsie reads from.',
+    journey: 'Click into a folder, like Composting and Worms, to see what\'s inside, then View or Download any file, or hit Upload file to add a new one. The AI button next to a file or folder tells Elsie to actually read it so she can start answering from it, and Refresh AI re-syncs everything if documents changed since she last checked.',
+    technical: 'This library is the other half of the Elsie feature: whatever gets uploaded and marked for the assistant here is exactly what she\'s allowed to cite from, so keeping folders organized isn\'t just tidiness, it directly controls what she does and doesn\'t know.',
+  },
+  {
+    id: 'marketplace',
+    label: 'Marketplace',
+    file: 'marketplace',
+    text: 'A community marketplace where staff and workers post things for sale or trade, like firewood, produce, or even farm excursions, each with a photo and a price in Rand.',
+    journey: 'Browse or search listings by title or location, and narrow results with the Min R / Max R price filters. To sell something yourself, click + Post a listing, add a title, price, location, a short description, and a required photo, then hit Post listing. Messages is where buyer and seller conversations about a listing actually happen.',
+    technical: 'Listings require a photo before they\'ll post, which cuts down on low-effort or spam posts, and the My listings / Archived tabs let a seller manage their own posts separately from browsing everyone else\'s.',
+  },
 ]
 
 export default function ProjectWalkthrough() {
@@ -159,11 +201,13 @@ export default function ProjectWalkthrough() {
                   />
                   <Field
                     label="User journey at this step"
+                    value={screen.journey}
                     placeholder="Walk through the user experience on this screen: what do they see, do, and feel?"
                     rows={3}
                   />
                   <Field
                     label="Technical implementation notes"
+                    value={screen.technical}
                     placeholder="Any notable implementation choices, challenges solved, or interesting technical details for this screen?"
                     rows={3}
                   />
