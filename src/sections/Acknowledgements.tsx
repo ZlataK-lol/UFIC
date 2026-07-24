@@ -173,7 +173,7 @@ export default function Acknowledgements() {
                     margin: '0 auto',
                     display: 'block',
                   }}
-                  placeholder="Your own closing words of gratitude — to South Africa, to everyone who made this possible, and to the person you became."
+                  value="Thank you to everyone who made this trip possible, but most importantly I want to thank the people of Africa who welcomed me with open arms and taught me so much about community and culture. I learned so many valuable lessons that helped shape me as a person and that will stay by me for the rest of my time."
                 />
               </div>
             </div>

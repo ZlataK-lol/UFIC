@@ -20,7 +20,7 @@ const WEEKS = [
     culture: [
       { activity: 'Aika Swai\'s "South Africa in Context" workshop and the Slave Lodge', note: 'The first real grounding in Cape Town\'s history — Apartheid and the slave trade that came before it — before I\'d even started meaningful project work, and it shaped how I approached everything after.' },
       { activity: 'Guest speaker Ronel Koekemoer on Grit GBV\'s work', note: 'A direct look at gender-based-violence advocacy in South Africa — a side of the country\'s challenges no orientation packet had prepared me for.' },
-      { activity: 'Group dinners at Tiger\'s Milk Kloof Street and Bay Harbour Market', note: 'Early, low-stakes meals that started turning "my cohort" into people I actually knew, before we\'d have to rely on each other for six more weeks.' },
+      { activity: 'Group dinner at Bay Harbour Market', note: 'An early, low-stakes meal that started turning "my cohort" into people I actually knew, before we\'d have to rely on each other for six more weeks.' },
     ],
   },
   {
@@ -52,7 +52,6 @@ const WEEKS = [
       { activity: 'Youth Day (June 16) — a public holiday commemorating the 1976 Soweto uprising', note: 'Having a national day of remembrance fall in the middle of our program was a reminder that the history we were learning wasn\'t just historical — it\'s actively observed and honored today.' },
       { activity: 'The Cape Malay Cooking Experience', note: 'Cooking a Cape Malay meal by hand taught me more about Cape Town\'s Muslim and Indonesian-heritage community in an afternoon than any reading could have.' },
       { activity: 'The High School Showcase at Curro Delft High School, and the Stellenbosch University visit', note: 'Talking with local students about our work was the first time I explained the project to people our own age outside the program — a good check on whether I could make it make sense to anyone.' },
-      { activity: 'Klein Goederust Wine Estate with owner Paul Siguqa, and Huguenot chocolate tasting', note: 'Hearing a Black wine estate owner\'s own story added another layer to how land, ownership, and history intersect in the Cape Winelands.' },
     ],
   },
   {

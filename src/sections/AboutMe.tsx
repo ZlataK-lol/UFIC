@@ -123,10 +123,18 @@ export default function AboutMe() {
             <span className="section-label">Going Deeper</span>
           </div>
           <div className="grid grid-cols-2 gap-5">
-            <Field label="My goals before departing" placeholder="What were you hoping to gain — academically, professionally, personally? What did you set out to prove or discover?" rows={5} />
-            <Field label="Fears & anxieties going in" placeholder="What made you nervous? Language barriers, unfamiliar environments, being far from home, technology culture differences?" rows={5} />
-            <Field label="My support system back home" placeholder="Who cheered you on? How did family, friends, or mentors support your decision to go to South Africa?" rows={4} />
-            <Field label="What I packed (literally & symbolically)" placeholder="What essentials did you bring? And what mindset, habits, or assumptions did you carry as invisible luggage?" rows={4} />
+            <Field
+              label="My goals before departing"
+              value="I was not expecting to learn that much personally on the trip. I was hoping to develop myself professionally and allow my career to take off, however, I underestimated the power of culture and community to be as strong as it was. Africa changed me more personally than it did professionally, however, changes in both of those areas were monumental."
+              placeholder="What were you hoping to gain — academically, professionally, personally? What did you set out to prove or discover?"
+              rows={5}
+            />
+            <Field
+              label="Fears & anxieties going in"
+              value="I was nervous to go as I had never truly been that far away from home before. It was scary to think that I would be in a new continent with complete strangers that I had not met before. I was also nervous going into South Africa as you hear a lot of negative things prior to travelling there. However, I gained amazing friends and was able to see the true beauty of Africa for myself and was able to make my own conclusions."
+              placeholder="What made you nervous? Language barriers, unfamiliar environments, being far from home, technology culture differences?"
+              rows={5}
+            />
           </div>
         </div>
 
