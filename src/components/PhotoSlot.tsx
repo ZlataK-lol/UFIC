@@ -5,7 +5,7 @@ import { useState } from 'react'
  * Falls back to the dashed placeholder if that file doesn't exist.
  *
  * To add or change a photo: drop a file with the matching name into `public/photos`
- * (or `public/screenshots` for app screens) and redeploy — no upload happens in the browser.
+ * (or `public/screenshots` for app screens) and redeploy. No upload happens in the browser.
  * See PHOTO_GUIDE.md in the project root for the full list of expected filenames.
  */
 export function PhotoSlot({

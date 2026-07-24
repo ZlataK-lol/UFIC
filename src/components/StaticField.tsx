@@ -1,6 +1,6 @@
 /**
- * Renders fixed text as a plain block instead of an <input>/<textarea> —
- * height follows content (no internal scrollbar), and there's nothing to click into or edit.
+ * Renders fixed text as a plain block instead of an <input>/<textarea>.
+ * Height follows content (no internal scrollbar), and there's nothing to click into or edit.
  */
 export function StaticField({
   value,

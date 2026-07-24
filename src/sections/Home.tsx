@@ -105,7 +105,7 @@ export default function Home() {
 
             {/* Right: cover photo */}
             <div className="flex flex-col gap-4">
-              <PhotoSlot label="Your cover photo — South Africa" src="/photos/cover.jpg" tall />
+              <PhotoSlot label="Your cover photo: South Africa" src="/photos/cover.jpg" tall />
               <StaticField
                 rows={2}
                 placeholder="Caption: where was this photo taken?"
@@ -132,7 +132,7 @@ export default function Home() {
               <StaticField
                 rows={7}
                 value="I chose South Africa as the destination for my trip because it had AI incorporated into the class, and I wanted to learn how to use AI responsibly on a global scale. I knew I would learn a lot professionally, but I also wanted to pick a place that would challenge my worldview and allow me to become more culturally aware. I knew that going to a country with a culture more similar to mine would not allow me to grow as quickly as picking a country completely different from what I am used to. I wanted to challenge myself and the knowledge I had, and South Africa seemed like the perfect place to begin."
-                placeholder="Write a short introduction — who you are, what this program was, and why you chose South Africa. Set the scene for the reader."
+                placeholder="Write a short introduction: who you are, what this program was, and why you chose South Africa. Set the scene for the reader."
               />
             </div>
             <div className="flex flex-col gap-1.5">

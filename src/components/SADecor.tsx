@@ -1,6 +1,6 @@
 /** Reusable South African decorative SVG components */
 
-/** Protea flower — South Africa's national flower */
+/** Protea flower: South Africa's national flower */
 export function Protea({ size = 64, opacity = 0.18 }: { size?: number; opacity?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 100 100" fill="none" style={{ opacity }}>

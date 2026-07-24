@@ -78,7 +78,7 @@ export default function Resume() {
         </h2>
       </div>
       <p className="text-sm mb-10" style={{ color: 'var(--muted-foreground)', maxWidth: '60ch' }}>
-        Document your academic background, work experience, and skills — both before and enriched by your time abroad.
+        Document your academic background, work experience, and skills: both before and enriched by your time abroad.
       </p>
 
       <div className="flex flex-col gap-6">
@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
           <Field
             label="Personal Statement"
-            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to technology that solves problems for the people who need it most rather than the people it's easiest to build for. Six weeks building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening before writing a line of code, and that real resilience isn't finding the ideal setup — it's redesigning around the constraints you're actually handed, region by region if you have to."
+            value="I'm a Computer Science student pursuing an AI certificate at the University of Florida, drawn to technology that solves problems for the people who need it most rather than the people it's easiest to build for. Six weeks building an AI assistant for a Cape Town nonprofit taught me that good engineering starts with listening before writing a line of code, and that real resilience isn't finding the ideal setup. It's redesigning around the constraints you're actually handed, region by region if you have to."
             placeholder="A concise statement (2–3 sentences) about your academic identity and aspirations, informed by your study abroad experience."
             rows={4}
           />
@@ -122,7 +122,7 @@ export default function Resume() {
               </div>
               <Field
                 label="Courses taken abroad"
-                value="This was a project-based practicum rather than enrolled coursework. My time abroad was spent as a Frontend Developer & AI Chatbot Design Intern for Safe Cities Permaculture (see Work Experience below) — learning by shipping for a real client instead of sitting in a classroom."
+                value="This was a project-based practicum rather than enrolled coursework. My time abroad was spent as a Frontend Developer & AI Chatbot Design Intern for Safe Cities Permaculture (see Work Experience below), learning by shipping for a real client instead of sitting in a classroom."
                 placeholder="List the courses you enrolled in, their titles, and a brief description of what you studied in each."
                 rows={4}
               />
@@ -146,7 +146,7 @@ export default function Resume() {
           />
           <Field
             label="Key responsibilities & accomplishments"
-            value="At Safe Cities: built frontend features and UI for a community-facing mobile application, implemented an AI-powered chatbot integrating the Anthropic Claude API, shipped responsive interfaces for auth, scheduling, task management, reporting, and the marketplace, and ran system testing and iteration throughout the build cycle. At Eagle Harbor Aquatics: 350+ hours managing and training new lifeguards in safety protocols, holding Red Cross Lifeguarding/CPR/AED and Basic Swim Instructor certifications — experience in calm, high-stakes communication that carried over directly into presenting to a nonprofit client."
+            value="At Safe Cities: built frontend features and UI for a community-facing mobile application, implemented an AI-powered chatbot integrating the Anthropic Claude API, shipped responsive interfaces for auth, scheduling, task management, reporting, and the marketplace, and ran system testing and iteration throughout the build cycle. At Eagle Harbor Aquatics: 350+ hours managing and training new lifeguards in safety protocols, holding Red Cross Lifeguarding/CPR/AED and Basic Swim Instructor certifications, experience in calm, high-stakes communication that carried over directly into presenting to a nonprofit client."
             placeholder="Describe your roles and what you achieved. Include any positions held during or connected to your abroad experience."
             rows={5}
           />
@@ -163,13 +163,13 @@ export default function Resume() {
             ]}
             defaults={[
               { 'Organization / Activity': 'Women in Computer Science and Engineering (WiCSE)', 'Role': 'Outreach Director', 'Location': 'University of Florida', 'Dates': 'Aug 2025 – Present' },
-              { 'Organization / Activity': 'WingHacks Hackathon — PhishHook', 'Role': 'Frontend Developer', 'Location': 'University of Florida', 'Dates': 'May 2026' },
+              { 'Organization / Activity': 'WingHacks Hackathon: PhishHook', 'Role': 'Frontend Developer', 'Location': 'University of Florida', 'Dates': 'May 2026' },
               { 'Organization / Activity': 'Russian Cultural Club', 'Role': 'Member', 'Location': 'University of Florida', 'Dates': 'Jan 2026 – Present' },
             ]}
           />
           <Field
             label="Impact & reflections"
-            value="As Outreach Director for WiCSE, I coordinate outreach initiatives and hackathons to grow participation in CS/CE — recruiting mentors and judges and leading workshops, work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. Between WiCSE, WingHacks, and Cape Town, I kept practicing the same skill from three different angles: building for people whose needs, context, and assumptions aren't my own — and learning to ask better questions before assuming I already understood them."
+            value="As Outreach Director for WiCSE, I coordinate outreach initiatives and hackathons to grow participation in CS/CE: recruiting mentors and judges and leading workshops, work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. Between WiCSE, WingHacks, and Cape Town, I kept practicing the same skill from three different angles: building for people whose needs, context, and assumptions aren't my own, and learning to ask better questions before assuming I already understood them."
             placeholder="What did you contribute? How did these activities shape your abroad experience or your professional outlook?"
             rows={4}
           />
@@ -181,7 +181,7 @@ export default function Resume() {
             <Field label="Languages" value="English (native), Spanish (conversational), Russian (conversational)" placeholder="List languages and proficiency levels (beginner, intermediate, fluent…)" rows={3} />
             <Field label="Technical Skills" value="React Native, Expo Router, Next.js, TypeScript, Tailwind CSS, Node.js/Express, MongoDB, Socket.IO, Anthropic Claude API, Microsoft Azure AI Foundry, RAG pipelines, Google Drive API" placeholder="Software, tools, platforms, research methods…" rows={3} />
             <Field label="Cross-cultural Competencies" value="Communicating technical concepts to non-technical stakeholders across a real language and cultural gap; adapting UI/UX decisions to explicit client feedback rather than my own assumptions; navigating Cape Town's history and context as an outsider building for a local community." placeholder="Skills gained from navigating a new culture, language barrier, unfamiliar systems…" rows={3} />
-            <Field label="Soft Skills Developed Abroad" value="Public speaking and presenting under real client stakes (a documented shift from pre-trip anxiety to confidence by the final presentations); resilience when infrastructure didn't work as documented; asking sharper, more specific questions of non-technical collaborators." placeholder="Adaptability, independence, communication, empathy — with specific examples." rows={3} />
+            <Field label="Soft Skills Developed Abroad" value="Public speaking and presenting under real client stakes (a documented shift from pre-trip anxiety to confidence by the final presentations); resilience when infrastructure didn't work as documented; asking sharper, more specific questions of non-technical collaborators." placeholder="Adaptability, independence, communication, empathy, with specific examples." rows={3} />
           </div>
         </Block>
 

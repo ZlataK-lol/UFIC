@@ -13,11 +13,11 @@ function Field({ label, value, placeholder, rows = 3 }: { label: string; value?:
 }
 
 const SCREENS = [
-  { id: 'home', label: 'Home Screen', file: 'home', text: 'The landing dashboard staff see after logging in — quick links to tasks, documents, the marketplace, and Elsie.' },
+  { id: 'home', label: 'Home Screen', file: 'home', text: 'The landing dashboard staff see after logging in: quick links to tasks, documents, the marketplace, and Elsie.' },
   { id: 'auth', label: 'Login / Auth', file: 'auth', text: 'Simple username/password auth with role-based access, so admins and workers see different capabilities.' },
-  { id: 'ai-assistant', label: 'Elsie — AI Assistant', file: 'ai-assistant', text: 'The chat interface for Elsie. Answers are grounded in Safe Cities\' own Drive documents, printed word-by-word, with sources cited and full conversation history saved and searchable.' },
+  { id: 'ai-assistant', label: 'Elsie: AI Assistant', file: 'ai-assistant', text: 'The chat interface for Elsie. Answers are grounded in Safe Cities\' own Drive documents, printed word-by-word, with sources cited and full conversation history saved and searchable.' },
   { id: 'tasks', label: 'Task Management', file: 'task-management', text: 'Admins assign tasks to specific workers; each worker only sees their own. Tasks can be reopened, marked overdue, or completed, with notes and images attached.' },
-  { id: 'documents', label: 'Document Library', file: 'document-library', text: 'A single synced system between the website and Safe Cities\' Google Drive — add a file to either one and it appears in both, with in-browser viewing for PDFs and Word docs.' },
+  { id: 'documents', label: 'Document Library', file: 'document-library', text: 'A single synced system between the website and Safe Cities\' Google Drive: add a file to either one and it appears in both, with in-browser viewing for PDFs and Word docs.' },
   { id: 'marketplace', label: 'Marketplace', file: 'marketplace', text: 'Community listings with photos, price ranges, and in-app messaging for buying, selling, and trading within the Safe Cities community.' },
 ]
 
@@ -76,7 +76,7 @@ export default function ProjectWalkthrough() {
             <span className="section-label">🔍 The Problem</span>
             <StaticField
               rows={5}
-              value="Safe Cities staff were losing real time manually searching through Drive folders, PDFs, and meeting notes to answer routine questions — a genuine bottleneck for field staff who needed timely answers, especially those with limited tech experience or unreliable internet access."
+              value="Safe Cities staff were losing real time manually searching through Drive folders, PDFs, and meeting notes to answer routine questions, a genuine bottleneck for field staff who needed timely answers, especially those with limited tech experience or unreliable internet access."
             />
           </div>
           <div className="flex items-center justify-center">
@@ -144,8 +144,8 @@ export default function ProjectWalkthrough() {
                 {/* Screenshots */}
                 <div className="flex flex-col gap-4">
                   <span className="section-label">{screen.label}</span>
-                  <PhotoSlot label={`${screen.label} — screenshot 1`} src={`/screenshots/${screen.file}-1.jpg`} height={260} />
-                  <PhotoSlot label={`${screen.label} — screenshot 2`} src={`/screenshots/${screen.file}-2.jpg`} height={200} />
+                  <PhotoSlot label={`${screen.label}: screenshot 1`} src={`/screenshots/${screen.file}-1.jpg`} height={260} />
+                  <PhotoSlot label={`${screen.label}: screenshot 2`} src={`/screenshots/${screen.file}-2.jpg`} height={200} />
                 </div>
 
                 {/* Description */}
@@ -158,7 +158,7 @@ export default function ProjectWalkthrough() {
                   />
                   <Field
                     label="User journey at this step"
-                    placeholder="Walk through the user experience on this screen — what do they see, do, and feel?"
+                    placeholder="Walk through the user experience on this screen: what do they see, do, and feel?"
                     rows={3}
                   />
                   <Field
@@ -193,9 +193,9 @@ export default function ProjectWalkthrough() {
         {/* Challenges & learnings */}
         <div className="grid grid-cols-2 gap-6 mb-10">
           <Field label="Biggest technical challenge" value="Discovering mid-project that key Azure AI models weren't available in the South Africa region meant redesigning the deployment across two regions with almost no notice and no clean playbook for it. Later, usability testing surfaced a second, subtler problem: the assistant was missing answers that existed in Safe Cities' documents but ranked outside the top results by semantic similarity alone. Fixing that meant learning and implementing Reciprocal Rank Fusion to combine keyword and vector search, which taught me that a working retrieval pipeline and a genuinely useful one are two different engineering problems." placeholder="" rows={5} />
-          <Field label="What you'd do differently" value="Migrate off the original Google Gemini + Render setup earlier. The cold-start warmup delays and black-box ranking behavior quietly cost us real usability points in testing, and in hindsight the signs were there weeks before we finally moved to Azure. The lesson: when infrastructure keeps fighting you, that's data, not bad luck — treat repeated friction as a signal to re-evaluate the stack, not a problem to keep working around." placeholder="" rows={5} />
-          <Field label="Most proud of" value="Securing the Microsoft Azure AI Foundry grant — $2,000 in AI credits that keep Elsie running for Safe Cities at no ongoing cost to the nonprofit, long after we've left. That's proud of in a different way than a clever feature: it's the one thing on this project that keeps paying off after the handoff. I'm also proud that the assistant is literally named Elsie, after one of our own early user personas, and that fixing retrieval (hybrid search) meant she could finally answer real staff questions, like ones about worm-composting practices, that vector search alone had quietly missed." placeholder="" rows={4} />
-          <Field label="Impact after the program" value="Handed off with recorded instructional videos and full documentation so Safe Cities staff could run the platform independently — not dependent on us being reachable after we left. The AI service stays live on Azure under grant funding, so there's no ongoing cost to the nonprofit. That constraint shaped the whole handoff: building something that works without its builders in the room is a harder goal than building something that works in a demo, and it's the standard I'd hold myself to on any project now." placeholder="" rows={4} />
+          <Field label="What you'd do differently" value="Migrate off the original Google Gemini + Render setup earlier. The cold-start warmup delays and black-box ranking behavior quietly cost us real usability points in testing, and in hindsight the signs were there weeks before we finally moved to Azure. The lesson: when infrastructure keeps fighting you, that's data, not bad luck. Treat repeated friction as a signal to re-evaluate the stack, not a problem to keep working around." placeholder="" rows={5} />
+          <Field label="Most proud of" value="Securing the Microsoft Azure AI Foundry grant: $2,000 in AI credits that keep Elsie running for Safe Cities at no ongoing cost to the nonprofit, long after we've left. That's proud of in a different way than a clever feature: it's the one thing on this project that keeps paying off after the handoff. I'm also proud that the assistant is literally named Elsie, after one of our own early user personas, and that fixing retrieval (hybrid search) meant she could finally answer real staff questions, like ones about worm-composting practices, that vector search alone had quietly missed." placeholder="" rows={4} />
+          <Field label="Impact after the program" value="Handed off with recorded instructional videos and full documentation so Safe Cities staff could run the platform independently, not dependent on us being reachable after we left. The AI service stays live on Azure under grant funding, so there's no ongoing cost to the nonprofit. That constraint shaped the whole handoff: building something that works without its builders in the room is a harder goal than building something that works in a demo, and it's the standard I'd hold myself to on any project now." placeholder="" rows={4} />
         </div>
       </div>
     </div>

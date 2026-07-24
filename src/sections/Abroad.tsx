@@ -65,7 +65,7 @@ export default function Abroad() {
         {/* Big overview */}
         <div className="grid gap-8 mb-14" style={{ gridTemplateColumns: '1fr 1fr' }}>
           <Field
-            label="The city / place — an overview"
+            label="The city / place: an overview"
             placeholder="Describe where you lived. The neighborhood, the rhythm of daily life, the sounds and smells. What made this place feel unique?"
             rows={6}
           />
@@ -90,7 +90,7 @@ export default function Abroad() {
             <Field label="Classes & professors" placeholder="Which courses did you love? Who were your professors? What surprised you about the academic culture?" rows={4} />
             <Field label="Academic challenges & growth" placeholder="What was difficult academically? How did you adapt to a different educational system or language?" rows={4} />
           </div>
-          <Field label="Most memorable academic experience" placeholder="A field trip, a guest lecture, a project — describe the single most memorable academic moment." rows={3} />
+          <Field label="Most memorable academic experience" placeholder="A field trip, a guest lecture, a project: describe the single most memorable academic moment." rows={3} />
         </div>
 
         {/* Daily life */}
@@ -99,7 +99,7 @@ export default function Abroad() {
           <div className="grid gap-6" style={{ gridTemplateColumns: '1fr 1fr' }}>
             <div className="flex flex-col gap-4">
               <PhotoSlot label="Your morning routine spot" src="/photos/morning-routine.jpg" height={180} />
-              <Field label="A typical weekday" placeholder="Walk us through a normal weekday — morning coffee, commute, classes, evenings. What did routine feel like in a foreign place?" rows={5} />
+              <Field label="A typical weekday" placeholder="Walk us through a normal weekday: morning coffee, commute, classes, evenings. What did routine feel like in a foreign place?" rows={5} />
             </div>
             <div className="flex flex-col gap-4">
               <PhotoSlot label="Weekend adventure" src="/photos/weekend-adventure.jpg" height={180} />
@@ -123,9 +123,9 @@ export default function Abroad() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Field label="Food & eating culture" placeholder="What did you eat? What local dishes did you try, love, or find challenging? How was eating a cultural experience in itself?" rows={4} />
-            <Field label="Cultural experiences & events" placeholder="Festivals, markets, performances, religious observances — what did you witness or participate in that broadened your world?" rows={4} />
+            <Field label="Cultural experiences & events" placeholder="Festivals, markets, performances, religious observances: what did you witness or participate in that broadened your world?" rows={4} />
             <Field label="Language & communication" placeholder="Did you learn or use the local language? Describe moments of connection or confusion across language barriers." rows={4} />
-            <Field label="Surprising cultural differences" placeholder="What caught you off guard? Small daily differences, social norms, etiquette — what made you rethink your assumptions?" rows={4} />
+            <Field label="Surprising cultural differences" placeholder="What caught you off guard? Small daily differences, social norms, etiquette: what made you rethink your assumptions?" rows={4} />
           </div>
         </div>
 
@@ -147,8 +147,8 @@ export default function Abroad() {
           <div className="grid grid-cols-2 gap-4">
             <Field label="Places I visited" placeholder="List all the cities, towns, and countries you traveled to. Star the ones that left the biggest mark." rows={4} />
             <Field label="Best travel memory" placeholder="Describe your most memorable travel experience in vivid detail. What made it special?" rows={4} />
-            <Field label="A place that surprised me" placeholder="Somewhere you didn't expect to love — or somewhere that didn't live up to expectations. What did you discover?" rows={3} />
-            <Field label="Travel challenges" placeholder="Getting lost, missed trains, language fails, travel fatigue — what went wrong, and what did you learn from it?" rows={3} />
+            <Field label="A place that surprised me" placeholder="Somewhere you didn't expect to love, or somewhere that didn't live up to expectations. What did you discover?" rows={3} />
+            <Field label="Travel challenges" placeholder="Getting lost, missed trains, language fails, travel fatigue: what went wrong, and what did you learn from it?" rows={3} />
           </div>
         </div>
 
@@ -161,11 +161,11 @@ export default function Abroad() {
                 <PhotoSlot label="Your friend group" src="/photos/friend-group.jpg" height={160} />
                 <PhotoSlot label="A local you met" src="/photos/local-met.jpg" height={160} />
               </div>
-              <Field label="The people I met" placeholder="Describe the community you built — fellow international students, local friends, roommates, host family. How did these relationships form?" rows={4} />
+              <Field label="The people I met" placeholder="Describe the community you built: fellow international students, local friends, roommates, host family. How did these relationships form?" rows={4} />
             </div>
             <div className="flex flex-col gap-4">
               <PhotoSlot label="A memorable gathering" src="/photos/memorable-gathering.jpg" height={200} />
-              <Field label="A friendship that mattered" placeholder="Tell the story of one relationship that changed you — how you met, what you shared, what you learned from each other." rows={4} />
+              <Field label="A friendship that mattered" placeholder="Tell the story of one relationship that changed you: how you met, what you shared, what you learned from each other." rows={4} />
             </div>
           </div>
         </div>

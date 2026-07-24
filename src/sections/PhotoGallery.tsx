@@ -156,7 +156,7 @@ export default function PhotoGallery() {
           <StaticField
             className="text-field mt-3"
             rows={2}
-            placeholder="Caption for your featured photo — what made this moment the one?"
+            placeholder="Caption for your featured photo: what made this moment the one?"
           />
         </div>
 
@@ -200,7 +200,7 @@ export default function PhotoGallery() {
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">What the camera couldn't capture</label>
-              <StaticField rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice — something that lives only in your memory." />
+              <StaticField rows={4} placeholder="Describe a moment, feeling, or experience that no photo could ever do justice, something that lives only in your memory." />
             </div>
           </div>
         </div>

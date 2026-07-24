@@ -59,13 +59,13 @@ export default function AboutMe() {
             </div>
             <Field
               label="Who I am"
-              value="I was born in Moscow, Russia, and moved to the US when I was six. Being born in another country and growing up bilingual made me genuinely curious about cultures and languages, and I find real joy in meeting other people who share my passion for travel. I went into computer science because my father is a software engineer, and watching his passion for the work became my own — he taught me how to problem-solve from a young age, and we started practicing code together early enough that the underlying logic became second nature before I ever took a class in it. Outside of school, I love being in the water and any water sport I can get my hands on."
-              placeholder="Tell us about yourself — your background, your interests, what drives you as a person and a technologist."
+              value="I was born in Moscow, Russia, and moved to the US when I was six. Being born in another country and growing up bilingual made me genuinely curious about cultures and languages, and I find real joy in meeting other people who share my passion for travel. I went into computer science because my father is a software engineer, and watching his passion for the work became my own. He taught me how to problem-solve from a young age, and we started practicing code together early enough that the underlying logic became second nature before I ever took a class in it. Outside of school, I love being in the water and any water sport I can get my hands on."
+              placeholder="Tell us about yourself: your background, your interests, what drives you as a person and a technologist."
               rows={4}
             />
             <Field
               label="Why South Africa, why this program"
-              value="The program first caught my attention because of its AI and software UX component, but it was the culture that ultimately convinced me to apply. After hearing Dr. Thomas speak about it at a WiCSE meeting, I realized this program would be perfect for me — a chance to grow two of my genuine interests at once, technology and culture, while learning about people whose lives looked nothing like my own."
+              value="The program first caught my attention because of its AI and software UX component, but it was the culture that ultimately convinced me to apply. After hearing Dr. Thomas speak about it at a WiCSE meeting, I realized this program would be perfect for me, a chance to grow two of my genuine interests at once, technology and culture, while learning about people whose lives looked nothing like my own."
               placeholder="What drew you to this specific program? Was it a lifelong curiosity, a recommendation, or something you read? What made you say yes?"
               rows={4}
             />
@@ -87,7 +87,7 @@ export default function AboutMe() {
                 description: 'Recruit mentors and judges and lead workshops to grow participation in CS/CE at UF, work that runs in parallel with GatorAI. It\'s taught me how to build community around a technical field before people already feel like they belong in it.',
               },
               {
-                org: 'WingHacks Hackathon — PhishHook',
+                org: 'WingHacks Hackathon: PhishHook',
                 role: 'Frontend Developer',
                 dates: 'May 2026',
                 description: 'Designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. Building under a hackathon clock taught me to make fast, defensible design decisions instead of waiting for the perfect one.',
@@ -102,7 +102,7 @@ export default function AboutMe() {
                 org: 'Safe Cities Permaculture',
                 role: 'Frontend Developer & AI Chatbot Design Intern',
                 dates: 'May 2026 – Present',
-                description: 'Built frontend features and an AI-powered chatbot for a Cape Town nonprofit\'s community app (see Trip & Project Overview). It\'s the internship that shaped most of what\'s on this site, and taught me to design for users with real constraints — not the constraints coursework assumes.',
+                description: 'Built frontend features and an AI-powered chatbot for a Cape Town nonprofit\'s community app (see Trip & Project Overview). It\'s the internship that shaped most of what\'s on this site, and taught me to design for users with real constraints, not the constraints coursework assumes.',
               },
               {
                 org: 'Eagle Harbor Aquatics',
@@ -136,7 +136,7 @@ export default function AboutMe() {
             <Field
               label="My goals before departing"
               value="I was not expecting to learn that much personally on the trip. I was hoping to develop myself professionally and allow my career to take off, however, I underestimated the power of culture and community to be as strong as it was. Africa changed me more personally than it did professionally, however, changes in both of those areas were monumental. I wanted real technical experience I could point to and use to launch my tech career, and I expected that to be the main takeaway. I still got that career boost, but it ended up being the smaller half of what I actually gained from the trip."
-              placeholder="What were you hoping to gain — academically, professionally, personally? What did you set out to prove or discover?"
+              placeholder="What were you hoping to gain: academically, professionally, personally? What did you set out to prove or discover?"
               rows={5}
             />
             <Field
@@ -158,7 +158,7 @@ export default function AboutMe() {
                 <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--muted-foreground)' }}>Before South Africa</span>
               </div>
               {[
-                { label: 'How I saw this trip', value: 'A resume line — a way to sharpen my software and AI skills and give my tech career a head start.' },
+                { label: 'How I saw this trip', value: 'A resume line, a way to sharpen my software and AI skills and give my tech career a head start.' },
                 { label: 'How I understood culture and belonging', value: 'Curious about other cultures and languages from growing up bilingual, but still mostly reading about other communities from the outside.' },
                 { label: 'What I expected from being far from home', value: 'Nervous about strangers, a new continent, unreliable technology, and everything people warn you about South Africa before you\'ve ever been.' },
               ].map(({ label, value }) => (
@@ -174,9 +174,9 @@ export default function AboutMe() {
                 <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--accent)' }}>After South Africa</span>
               </div>
               {[
-                { label: 'How I see this trip now', value: 'The place that taught me culture and community can change you faster and deeper than any curriculum — the career growth was only half of what I actually gained.' },
+                { label: 'How I see this trip now', value: 'The place that taught me culture and community can change you faster and deeper than any curriculum. The career growth was only half of what I actually gained.' },
                 { label: 'How I understand culture and belonging now', value: 'Someone who has actually built something for a community she wasn\'t born into, and learned that curiosity has to be paired with humility, not just interest.' },
-                { label: 'What being far from home actually taught me', value: 'Genuinely amazed by the friends I made and the beauty I saw for myself — proof that my own conclusions were worth more than anyone else\'s warnings.' },
+                { label: 'What being far from home actually taught me', value: 'Genuinely amazed by the friends I made and the beauty I saw for myself, proof that my own conclusions were worth more than anyone else\'s warnings.' },
               ].map(({ label, value }) => (
                 <div key={label} className="mb-4">
                   <label className="section-label">{label}</label>

@@ -60,7 +60,7 @@ export default function Acknowledgements() {
       <div className="ndebele-border" />
 
       <div className="px-8 py-16 max-w-5xl mx-auto">
-        {/* Thank you section — everyone in one place */}
+        {/* Thank you section: everyone in one place */}
         <div
           className="rounded-lg overflow-hidden mb-14"
           style={{ border: '1px solid var(--border)', background: 'var(--card)' }}
@@ -84,7 +84,7 @@ export default function Acknowledgements() {
             </p>
             <StaticField
               rows={8}
-              value="Thank you to Dr. Sanethia Thomas, our faculty advisor, for guiding Penguin Intelligence through every weekly check-in and pushing us to keep the client's actual needs at the center of the build. To Ping Neo and Naomi Harrell, for the program support and coordination — the logistics, structure, and behind-the-scenes work that kept three students accountable across six weeks and a continent, and let us focus on the work in front of us. To EDU Africa, for the local infrastructure, knowledge, and on-the-ground partnership that made it possible for us to land in Cape Town and do work that actually mattered. And to Safe Cities Permaculture — for trusting three students with a real problem, for your patience during our first rough interviews, for honest usability feedback, and for welcoming us onto the farm in Elsies River. Building Elsie for you was the best part of this program."
+              value="Thank you to Dr. Sanethia Thomas, our faculty advisor, for guiding Penguin Intelligence through every weekly check-in and pushing us to keep the client's actual needs at the center of the build. To Ping Neo and Naomi Harrell, for the program support and coordination: the logistics, structure, and behind-the-scenes work that kept three students accountable across six weeks and a continent, and let us focus on the work in front of us. To EDU Africa, for the local infrastructure, knowledge, and on-the-ground partnership that made it possible for us to land in Cape Town and do work that actually mattered. And to Safe Cities Permaculture, for trusting three students with a real problem, for your patience during our first rough interviews, for honest usability feedback, and for welcoming us onto the farm in Elsies River. Building Elsie for you was the best part of this program."
             />
           </div>
         </div>
@@ -100,28 +100,28 @@ export default function Acknowledgements() {
               <label className="section-label">Teammates</label>
               <StaticField
                 rows={5}
-                value="Adam Makled (Senior, Comp Sci — Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng — Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
+                value="Adam Makled (Senior, Comp Sci; Team Lead & Backend Developer) kept the project structured and owned the harder backend and AI-service work, including the Azure migration. Anthony Vargas (Sophomore, Comp Eng; Scrum Master) kept our sprints organized and took on video editing for our handoff documentation. I'll remember how naturally we split up hard problems without anyone having to ask."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Local community & South African hosts</label>
               <StaticField
                 rows={5}
-                value="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet — that honesty made the platform better."
+                value="Thank you to the Safe Cities Permaculture staff and farm workers in Elsies River who welcomed us onto the farm, patiently answered our questions during usability testing, and were honest with us about what wasn't working yet. That honesty made the platform better."
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Family & friends back home</label>
               <StaticField
                 rows={4}
-                placeholder="Who supported you from afar — who did you call when you were overwhelmed or excited? What did their support mean while you were abroad?"
+                placeholder="Who supported you from afar: who did you call when you were overwhelmed or excited? What did their support mean while you were abroad?"
               />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="section-label">Others to thank</label>
               <StaticField
                 rows={4}
-                placeholder="Anyone else who played a role — a professor who inspired you, a scholarship that funded you, a book that prepared you, a stranger who showed you kindness."
+                placeholder="Anyone else who played a role: a professor who inspired you, a scholarship that funded you, a book that prepared you, a stranger who showed you kindness."
               />
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function Acknowledgements() {
                   margin: '1.5rem auto',
                 }}
               >
-                "Ubuntu — I am because we are."
+                "Ubuntu: I am because we are."
               </blockquote>
               <p className="text-xs tracking-widest mb-5" style={{ color: 'rgba(202,233,245,0.6)', letterSpacing: '0.2em' }}>
                 NGUNI BANTU PROVERB &nbsp;·&nbsp; SOUTH AFRICA

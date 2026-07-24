@@ -98,7 +98,7 @@ export default function App() {
         </nav>
       </div>
 
-      {/* Content — offset for nav + ndebele stripe */}
+      {/* Content: offset for nav + ndebele stripe */}
       <div style={{ paddingTop: '68px' }}>
         <section id="home"><Home /></section>
 
@@ -136,7 +136,7 @@ export default function App() {
       <footer className="text-center py-8" style={{ background: 'var(--secondary)' }}>
         <DiamondRow count={7} />
         <p className="mt-3 text-xs tracking-widest" style={{ color: 'var(--muted-foreground)' }}>
-          Ubuntu — I am because we are
+          Ubuntu: I am because we are
         </p>
         <p className="mt-1 text-xs" style={{ color: 'var(--muted-foreground)' }}>
           Study Abroad Portfolio &nbsp;·&nbsp; South Africa 2026

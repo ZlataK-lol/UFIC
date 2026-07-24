@@ -88,8 +88,8 @@ export default function TripOverview() {
             <span className="section-label">About the Program</span>
             <Field
               label="Program name & organization"
-              placeholder="e.g. EDU Africa Summer Research Program — describe the program, who runs it, and what its mission is."
-              value="UF SWE and UX Global Internship, a University of Florida study abroad program run in partnership with EDU Africa that pairs CS/CE students with a real nonprofit client for a semester-long software build — from client discovery through final handoff."
+              placeholder="e.g. EDU Africa Summer Research Program: describe the program, who runs it, and what its mission is."
+              value="UF SWE and UX Global Internship, a University of Florida study abroad program run in partnership with EDU Africa that pairs CS/CE students with a real nonprofit client for a semester-long software build, from client discovery through final handoff."
               rows={4}
             />
             <Field
@@ -125,19 +125,19 @@ export default function TripOverview() {
             <Field
               label="Project name"
               placeholder="What was the application called?"
-              value="AFC Estate — home to Elsie, the Safe Cities AI Assistant"
+              value="AFC Estate: home to Elsie, the Safe Cities AI Assistant"
               rows={1}
             />
             <Field
               label="Problem being solved"
               placeholder="What real-world problem in South Africa did this project address?"
-              value="Safe Cities staff were losing real time hunting through Drive folders, PDFs, and meeting notes for routine answers — a bottleneck for field staff who needed timely information and often didn't have it."
+              value="Safe Cities staff were losing real time hunting through Drive folders, PDFs, and meeting notes for routine answers, a bottleneck for field staff who needed timely information and often didn't have it."
               rows={1}
             />
             <Field
               label="Project description"
-              placeholder="Describe the application at a high level — what does it do, who uses it, and why does it matter to the South African context?"
-              value="AFC Estate is a farm-management web app for Safe Cities Permaculture, with auth, a document library, task and schedule management, a marketplace, and messaging. Its centerpiece is Elsie, a RAG-based AI assistant that answers natural-language staff questions grounded in the organization's own Google Drive documents and cites its sources — so knowledge that used to live in scattered folders is now a conversation away."
+              placeholder="Describe the application at a high level: what does it do, who uses it, and why does it matter to the South African context?"
+              value="AFC Estate is a farm-management web app for Safe Cities Permaculture, with auth, a document library, task and schedule management, a marketplace, and messaging. Its centerpiece is Elsie, a RAG-based AI assistant that answers natural-language staff questions grounded in the organization's own Google Drive documents and cites its sources, so knowledge that used to live in scattered folders is now a conversation away."
               rows={5}
             />
             <Field
@@ -155,7 +155,7 @@ export default function TripOverview() {
             <Field
               label="Impact & intended users"
               placeholder="Who benefits from this application? What community or population does it serve? What change does it enable?"
-              value="Safe Cities Permaculture's program staff and field workers in Elsies River — people who often have limited tech experience and unreliable connectivity, but need fast, trustworthy answers to run community and farming programs without hunting through folders."
+              value="Safe Cities Permaculture's program staff and field workers in Elsies River, people who often have limited tech experience and unreliable connectivity, but need fast, trustworthy answers to run community and farming programs without hunting through folders."
               rows={3}
             />
           </div>
@@ -176,7 +176,7 @@ export default function TripOverview() {
                 { week: 'Jun 1 – Jun 7', label: 'Arrival & Kickoff', text: 'Landed in Cape Town on May 31st. Delivered our kickoff presentation (project overview, personas, user stories) and set up the existing project environment on our machines.' },
                 { week: 'Jun 8 – Jun 21', label: 'Building the AI Assistant', text: 'Built the first version of Elsie, connected it to Safe Cities\' Google Drive, and automated document intake via an email-to-Drive script.' },
                 { week: 'Jun 22 – Jul 5', label: 'Cloud Migration & Testing', text: 'Migrated the AI service to Microsoft Azure AI Foundry using a $2,000 nonprofit grant, then ran usability testing with the client and peers.' },
-                { week: 'Jul 6 – Jul 12', label: 'Final Presentations & Departure', text: 'Delivered final presentations, walked the client through the finished platform in detail, and left Cape Town on July 12th — our last week in-country.' },
+                { week: 'Jul 6 – Jul 12', label: 'Final Presentations & Departure', text: 'Delivered final presentations, walked the client through the finished platform in detail, and left Cape Town on July 12th, our last week in-country.' },
                 { week: 'After Jul 12', label: 'Documentation & Coming Home', text: 'Made instructional videos for Safe Cities staff back home, wrapped up documentation with the team, and worked through the adjustment of reverse culture shock.' },
               ].map(({ week, label, text }, i) => (
                 <div key={week} className="flex gap-6 pb-8 relative">
