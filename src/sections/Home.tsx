@@ -46,7 +46,17 @@ export default function Home() {
             <div className="flex flex-col justify-center gap-6">
               <DiamondRow count={5} />
               <div>
-                <div className="section-label" style={{ color: 'rgba(202,233,245,0.7)' }}>Zlata Kovrigina's Study Abroad Portfolio</div>
+                <div
+                  style={{
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                    color: '#F0F8FF',
+                    lineHeight: 1.15,
+                  }}
+                >
+                  Zlata Kovrigina
+                </div>
+                <div className="section-label mt-1" style={{ color: 'rgba(202,233,245,0.7)' }}>Study Abroad Portfolio</div>
                 <h1
                   className="leading-tight mt-2"
                   style={{
@@ -108,7 +118,7 @@ export default function Home() {
               <PhotoSlot label="Your cover photo: South Africa" src="/photos/cover.jpg" tall />
               <StaticField
                 rows={2}
-                value="Me at the top of Table Mountain, overlooking Cape Town"
+                value="Table Mountain - South Africa"
                 style={{ background: 'rgba(240,248,255,0.08)', border: '1px solid rgba(173,216,230,0.2)', color: '#F0F8FF' }}
               />
             </div>
