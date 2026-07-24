@@ -148,45 +148,6 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* Before & after */}
-        <div className="mb-12">
-          <span className="section-label mb-5 block">Before & After</span>
-          <div className="grid grid-cols-2 gap-0 rounded-lg overflow-hidden" style={{ border: '1px solid var(--border)' }}>
-            <div className="p-6" style={{ background: 'var(--card)' }}>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-2 h-2 rounded-full" style={{ background: 'var(--muted-foreground)' }} />
-                <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--muted-foreground)' }}>Before South Africa</span>
-              </div>
-              {[
-                { label: 'How I saw this trip', value: 'A resume line, a way to sharpen my software and AI skills and give my tech career a head start.' },
-                { label: 'How I understood culture and belonging', value: 'Curious about other cultures and languages from growing up bilingual, but still mostly reading about other communities from the outside.' },
-                { label: 'What I expected from being far from home', value: 'Nervous about strangers, a new continent, unreliable technology, and everything people warn you about South Africa before you\'ve ever been.' },
-              ].map(({ label, value }) => (
-                <div key={label} className="mb-4">
-                  <label className="section-label">{label}</label>
-                  <StaticField className="text-field mt-1" rows={2} value={value} />
-                </div>
-              ))}
-            </div>
-            <div className="p-6" style={{ background: 'var(--secondary)' }}>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-2 h-2 rounded-full" style={{ background: 'var(--accent)' }} />
-                <span style={{ fontFamily: '"Playfair Display", Georgia, serif', color: 'var(--accent)' }}>After South Africa</span>
-              </div>
-              {[
-                { label: 'How I see this trip now', value: 'The place that taught me culture and community can change you faster and deeper than any curriculum. The career growth was only half of what I actually gained.' },
-                { label: 'How I understand culture and belonging now', value: 'Someone who has actually built something for a community she wasn\'t born into, and learned that curiosity has to be paired with humility, not just interest.' },
-                { label: 'What being far from home actually taught me', value: 'Genuinely amazed by the friends I made and the beauty I saw for myself, proof that my own conclusions were worth more than anyone else\'s warnings.' },
-              ].map(({ label, value }) => (
-                <div key={label} className="mb-4">
-                  <label className="section-label">{label}</label>
-                  <StaticField className="text-field mt-1" rows={2} value={value} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Pre-departure photos */}
         <div>
           <span className="section-label mb-4 block">Before Departure</span>

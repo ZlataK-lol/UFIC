@@ -149,9 +149,6 @@ export default function ProjectWalkthrough() {
             <Field label="Key integrations" value="Google Drive API (document corpus + email-to-Drive automation), Microsoft Azure AI Foundry (DeepSeek-V4-Flash + text-embedding-3-small), Azure AI Search (hybrid vector + keyword retrieval)." rows={3} placeholder="" />
             <Field label="Deployment" value="MongoDB Atlas for data, hosted app on Vercel, AI service migrated from Google/Render to Microsoft Azure for reliability and to remove cold-start warmup delays." rows={3} placeholder="" />
           </div>
-          <div className="mt-5">
-            <PhotoSlot label="Architecture diagram / system diagram" src="/screenshots/architecture-diagram.jpg" aspectRatio="21 / 9" fit="contain" />
-          </div>
         </div>
 
         {/* Screen-by-screen walkthrough */}
