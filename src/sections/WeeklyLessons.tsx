@@ -53,11 +53,10 @@ const WEEKS = [
     dates: 'Jun 29 – Jul 5',
     title: 'Testing & Iteration',
     color: '#86C5D8',
-    time: 'Not individually recorded this week.',
-    contribution: 'As a team: optimized the homepage UI, merged the Google Drive and website document systems into one synced source of truth, and conducted two peer usability tests plus one client usability test.',
-    reflection: 'No individual reflection was submitted for this week — only a team-level status report exists. This is a real gap in the record, not a placeholder to gloss over.',
-    lesson: '',
-    incomplete: true,
+    time: 'About 8–9 hours — 2–3 hours researching and running usability testing, 2 hours setting up Microsoft account details, and 3 hours fixing smaller site issues, plus coordinating team meetings and status updates throughout the week.',
+    contribution: 'Helped run usability testing using SUS and other user-analysis tools, including interviewing a classmate and helping put together the report. Set up Microsoft account details for the client, including budget-warning email alerts and other account configuration. Also fixed a number of smaller site issues — cleaning up wording, updating program information, swapping in new company photos, and requiring a photo on marketplace posts. Alongside this, planned team meetings and kept everyone up to date on where the project stood.',
+    reflection: 'Learned how to actually conduct usability testing — not just run through a checklist, but make sure a program is accessible and genuinely useful to different kinds of users, not just functional in the abstract. Also learned how to voice concerns during peer testing constructively: several classmates asked me to review their sites, and I had to learn to pair honest criticism with real compliments so the feedback landed without anyone feeling attacked. Beyond that, learned how to take testing responses and actually translate them into concrete changes to the site, plus a handful of new Microsoft account features, like setting up budget-watching alerts.',
+    lesson: 'Usability testing only works if you\'re honest in both directions — as a tester, give feedback people can actually act on, and as the one being tested, be willing to change the site because of what you hear.',
   },
   {
     num: 6,
@@ -118,7 +117,7 @@ export default function WeeklyLessons() {
                   </div>
                   <div className="flex-1">
                     <div className="section-label mb-0.5">
-                      Week {week.num} &middot; {week.dates}{week.incomplete ? ' — record incomplete' : ''}
+                      Week {week.num} &middot; {week.dates}
                     </div>
                     <div style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: '1.15rem', color: 'var(--foreground)' }}>
                       {week.title}
