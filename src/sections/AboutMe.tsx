@@ -68,27 +68,49 @@ export default function AboutMe() {
             <Protea size={32} opacity={0.7} />
             <span className="section-label">School Involvement & Activities</span>
           </div>
-          <div className="grid grid-cols-2 gap-4 mb-5">
+          <div className="grid grid-cols-2 gap-4">
             {[
-              { org: 'Women in Computer Science and Engineering (WiCSE)', role: 'Outreach Director', dates: 'Aug 2025 – Present' },
-              { org: 'WingHacks Hackathon — PhishHook', role: 'Frontend Developer', dates: 'May 2026' },
-              { org: 'Russian Cultural Club', role: 'Member', dates: 'Jan 2026 – Present' },
-              { org: 'Safe Cities Permaculture', role: 'Frontend Developer & AI Chatbot Design Intern', dates: 'May 2026 – Present' },
-              { org: 'Eagle Harbor Aquatics', role: 'Lead Lifeguard and Swim Instructor', dates: 'June 2023 – Present' },
-            ].map(({ org, role, dates }) => (
-              <div key={org} className="sa-card">
-                <div style={{ fontWeight: 700, color: 'var(--foreground)', fontSize: '0.9375rem' }}>{org}</div>
-                <div className="section-label mt-1">{role}</div>
-                <div className="text-xs mt-1" style={{ color: 'var(--muted-foreground)' }}>{dates}</div>
+              {
+                org: 'Women in Computer Science and Engineering (WiCSE)',
+                role: 'Outreach Director',
+                dates: 'Aug 2025 – Present',
+                description: 'Recruit mentors and judges and lead workshops to grow participation in CS/CE at UF, work that runs in parallel with GatorAI. It\'s taught me how to build community around a technical field before people already feel like they belong in it.',
+              },
+              {
+                org: 'WingHacks Hackathon — PhishHook',
+                role: 'Frontend Developer',
+                dates: 'May 2026',
+                description: 'Designed the frontend for PhishHook, an anti-phishing website with an interactive multi-level phishing simulator and an AI-generated audio comprehension quiz. Building under a hackathon clock taught me to make fast, defensible design decisions instead of waiting for the perfect one.',
+              },
+              {
+                org: 'Russian Cultural Club',
+                role: 'Member',
+                dates: 'Jan 2026 – Present',
+                description: 'A space to stay connected to my heritage and language on campus. Being part of it kept a piece of home present even while I was preparing to spend a summer building for a community on another continent.',
+              },
+              {
+                org: 'Safe Cities Permaculture',
+                role: 'Frontend Developer & AI Chatbot Design Intern',
+                dates: 'May 2026 – Present',
+                description: 'Built frontend features and an AI-powered chatbot for a Cape Town nonprofit\'s community app (see Trip & Project Overview). It\'s the internship that shaped most of what\'s on this site, and taught me to design for users with real constraints — not the constraints coursework assumes.',
+              },
+              {
+                org: 'Eagle Harbor Aquatics',
+                role: 'Lead Lifeguard and Swim Instructor',
+                dates: 'June 2023 – Present',
+                description: '350+ hours managing and training new lifeguards in safety protocols, holding Red Cross Lifeguarding/CPR/AED and Basic Swim Instructor certifications. Years of calm, high-stakes communication here turned out to be direct preparation for presenting to a nonprofit client under real pressure.',
+              },
+            ].map(({ org, role, dates, description }) => (
+              <div key={org} className="sa-card flex flex-col gap-2">
+                <div>
+                  <div style={{ fontWeight: 700, color: 'var(--foreground)', fontSize: '0.9375rem' }}>{org}</div>
+                  <div className="section-label mt-1">{role}</div>
+                  <div className="text-xs mt-1" style={{ color: 'var(--muted-foreground)' }}>{dates}</div>
+                </div>
+                <p className="text-sm" style={{ color: 'var(--foreground)', lineHeight: 1.6 }}>{description}</p>
               </div>
             ))}
           </div>
-          <Field
-            label="How these activities shape who I am"
-            value="As Outreach Director for WiCSE, I recruit mentors and judges and lead workshops to grow participation in CS/CE — work that runs in parallel with GatorAI. At WingHacks, I designed the frontend for PhishHook, an anti-phishing website with an interactive phishing simulator. Between WiCSE, WingHacks, my internship at Safe Cities, and years of teaching people to swim at Eagle Harbor, the common thread is the same: I gravitate toward roles where I'm building or teaching for someone whose starting point isn't my own."
-            placeholder="How do your clubs, activities, and jobs outside the classroom connect to who you are and what you care about?"
-            rows={4}
-          />
         </div>
 
         {/* Deeper reflection */}
